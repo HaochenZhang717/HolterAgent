@@ -1,0 +1,13 @@
+{
+  "name": "record_st_overview",
+  "description": "The whole record at a glance for each lead this candidate involves: share of the record outside candidates where this lead's ST deviation reaches half of / all of this candidate's extremum, the extremum's percentile in the record, the other candidates of the same lead and sign, and hourly median ST deviation and heart rate. Use it to judge whether the candidate is a new change or the level this lead often sits at. A measurement packet, not a diagnosis.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "record_id": {"type": "string"},
+      "candidate_id": {"type": "string"}
+    },
+    "required": ["record_id", "candidate_id"],
+    "additionalProperties": false
+  }
+}

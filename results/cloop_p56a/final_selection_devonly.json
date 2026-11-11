@@ -1,0 +1,67 @@
+{
+ "select_split": "validation_v4 minus ltstdb_unused candidates",
+ "n_cases": 104,
+ "n_patients": 14,
+ "n_ischemic": 45,
+ "why": "validation_v4 holds 165 candidates of the ltstdb_unused test records (found 2026-10-24)",
+ "old_pick": "a09",
+ "rows": [
+  {
+   "id": "a07",
+   "s_auc": 0.7815333333333333,
+   "v_auc_all": 0.8688611111111111,
+   "v_auc_dev": 0.9150659133709981,
+   "v_auc_dev_per_rep": [
+    0.8762711864406779,
+    0.8973634651600754,
+    0.9016949152542373
+   ],
+   "v_auc_unused_part": 0.8362411998775635,
+   "lineage": [
+    "v08p",
+    "a02",
+    "a06",
+    "a07"
+   ]
+  },
+  {
+   "id": "a09",
+   "s_auc": 0.7766222222222222,
+   "v_auc_all": 0.8759722222222223,
+   "v_auc_dev": 0.8602636534839925,
+   "v_auc_dev_per_rep": [
+    0.8843691148775894,
+    0.7990583804143127,
+    0.8478342749529191
+   ],
+   "v_auc_unused_part": 0.8849862258953168,
+   "lineage": [
+    "v08p",
+    "a02",
+    "a03",
+    "a04",
+    "a08",
+    "a09"
+   ]
+  },
+  {
+   "id": "a03",
+   "s_auc": 0.7764666666666666,
+   "v_auc_all": 0.8615,
+   "v_auc_dev": 0.9242937853107345,
+   "v_auc_dev_per_rep": [
+    0.8930320150659133,
+    0.8753295668549906,
+    0.9060263653483992
+   ],
+   "v_auc_unused_part": 0.8213957759412305,
+   "lineage": [
+    "v08p",
+    "a02",
+    "a03"
+   ]
+  }
+ ],
+ "pick": "a03",
+ "time": "2026-10-24 03:30"
+}

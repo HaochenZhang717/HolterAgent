@@ -1,0 +1,197 @@
+{
+  "id": "xa03",
+  "parent": "xa02",
+  "summary": "Aspect A (knowledge): xa02's case-specific card retrieval plus a static Reference knowledge of card-cited for/against facts (heart-rate timing K01-K04/K08/K10/K29, depth K24-K26/K17, position versus ischemic QRS change K12/K14/K16/K18/K19/K28, recurrence and baseline K42/K43/K22/K23/K36) extended with K15 (positional QRS and ST changes are not proportional, so a QRS change below the flag thresholds does not exclude a step-like positional shift) and the matching How-to-use lines.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {}
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  },
+  "knowledge": {
+    "cards": true,
+    "precedents": false,
+    "sessions": [
+      "investigate"
+    ],
+    "max_auto_cards": 8,
+    "topic_rules": [
+      {
+        "topic": "heart_rate",
+        "any": [
+          [
+            "hr_rise_in_episode",
+            ">=",
+            10,
+            0
+          ],
+          [
+            "hr_rise_5min_before",
+            ">=",
+            10,
+            0
+          ],
+          [
+            "hr_at_peak",
+            ">=",
+            100,
+            0
+          ]
+        ]
+      },
+      {
+        "topic": "reasoning_errors",
+        "any": [
+          [
+            "hr_rise_5min_before",
+            "<",
+            5
+          ]
+        ]
+      },
+      {
+        "topic": "artifact",
+        "any": [
+          [
+            "noise_uv",
+            ">=",
+            50,
+            0
+          ],
+          [
+            "fiducials_ok_frac",
+            "<",
+            0.9,
+            1
+          ],
+          [
+            "hr_rise_5min_before",
+            "<",
+            5
+          ]
+        ]
+      },
+      {
+        "topic": "position_axis",
+        "any": [
+          [
+            "qrs_pp_change",
+            ">=",
+            0.15,
+            0
+          ],
+          [
+            "sync_qrs_st_steps",
+            ">=",
+            1,
+            0
+          ],
+          [
+            "qrs_corr",
+            "<",
+            0.95,
+            1
+          ],
+          [
+            "max_step_frac",
+            ">=",
+            0.5,
+            0
+          ]
+        ]
+      },
+      {
+        "topic": "t_wave_qrs",
+        "any": [
+          [
+            "qrs_pp_change",
+            ">=",
+            0.15,
+            0
+          ],
+          [
+            "sync_qrs_st_steps",
+            ">=",
+            1,
+            0
+          ],
+          [
+            "qrs_corr",
+            "<",
+            0.95,
+            1
+          ]
+        ]
+      },
+      {
+        "topic": "st_shape",
+        "any": [
+          [
+            "depression",
+            "==",
+            1
+          ]
+        ]
+      },
+      {
+        "topic": "rhythm",
+        "any": [
+          [
+            "non_normal_beat_frac",
+            ">=",
+            0.1,
+            0
+          ],
+          [
+            "rmssd_over_mean_rr",
+            ">=",
+            0.1,
+            0
+          ]
+        ]
+      },
+      {
+        "topic": "conduction",
+        "any": [
+          [
+            "qrs_ge_100ms",
+            "==",
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "always_topics": [
+      "temporal_context"
+    ]
+  }
+}

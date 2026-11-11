@@ -1,0 +1,86 @@
+{
+  "name": "submit_assessment",
+  "description": "Record an assessment of the candidate under review. p_ischemic is your probability that the ST change is ischemic. label is the most likely explanation and must agree with p_ischemic: 'ischemic' when p_ischemic >= 0.5, otherwise the most likely non-ischemic cause; 'indeterminate_data' only when the signal does not allow ST interpretation. Cite the evidence ids of each finding. A later final assessment is stored as a revision next to the earlier one.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "candidate_id": {
+        "type": "string"
+      },
+      "stage": {
+        "type": "string",
+        "enum": [
+          "initial",
+          "final"
+        ]
+      },
+      "p_ischemic": {
+        "type": "number",
+        "description": "0 to 1"
+      },
+      "label": {
+        "type": "string",
+        "enum": [
+          "ischemic",
+          "heart_rate_related",
+          "axis_or_position_shift",
+          "conduction_change",
+          "noise_artifact",
+          "other_nonischemic",
+          "indeterminate_data"
+        ]
+      },
+      "findings_for_ischemia": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "evidence_id": {
+              "type": "string"
+            },
+            "finding": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "finding"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "findings_against_ischemia": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "evidence_id": {
+              "type": "string"
+            },
+            "finding": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "finding"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "rationale": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "candidate_id",
+      "stage",
+      "p_ischemic",
+      "label",
+      "findings_for_ischemia",
+      "findings_against_ischemia",
+      "rationale"
+    ],
+    "additionalProperties": false
+  }
+}

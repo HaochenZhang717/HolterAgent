@@ -1,0 +1,42 @@
+{
+  "id": "a14",
+  "parent": "a05",
+  "summary": "Aspect B (tools and evidence): a05 with the library tool annotator_reference (the candidate re-judged against a Smrdel & Jager-style annotator-like ST reference that follows slow trends, steps and lead orientation, K22) added to the first-message dossier, with a two-directional reading guide in its description, a pointer in the Context guidance and its reading wired into checklist item A (real local change).",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response",
+      "annotator_reference"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {
+      "annotator_reference": "The candidate re-judged against a time-varying ST reference built like that of Smrdel & Jager (2002), an automatic approximation of the Long-Term ST Database annotators' reference. The annotators measured deviations from an ST reference function joined between local references placed in non-ischaemic data (K22), and that reference followed slow drifts, axis shifts and conduction changes; so a change that exceeds 100 uV against our record-wide median can stay below 100 uV against theirs. Per involved lead: the peak deviation against the record-wide median and after each of three steps (slow trend: 30-min and 4-h moving means; steps: ST or QRS-shape steps; lead orientation: deviations opposite to the lead's usual direction absorbed), whether the LTSTDB episode rule still finds an episode at 100 uV and at 150 uV, which step first dropped it below 100 uV, the lead's orientation and the reference slope. How to read it, in both directions (checklist item A): an episode at 150 uV in the peak lead means the change stands out from the slow trend, the steps and the lead's orientation; that is evidence against slow drift, position/axis and reference explanations, but it does not separate an ischaemic from a heart-rate related change (items B, C and D do that). No episode at 100 uV in any involved lead means the change is largely accounted for by a slow trend (drift), a step (position/axis or conduction) or a deviation opposite to the lead's usual direction (named by first_step_dropping_it_below_100_uv); that is evidence for the corresponding non-ischaemic explanation. When the step named is 'step', confirm it in morphology_steps (a synchronous ST and QRS step at one moment) before reading it as position. An episode at 100 but not at 150 uV is the uncertain zone (Smrdel & Jager needed 150 uV with their automatic reference to match the protocol B annotations, at about 75% sensitivity and positive predictivity). The reference is approximate: a long real episode can pull the 30-min trend along and be partly absorbed, and a step detected in a lead with a very small QRS is unreliable; weigh it together with episode_dynamics, episode_context and the trend image, not as a verdict. Supplied in the initial dossier. A measurement packet, not a diagnosis."
+    }
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

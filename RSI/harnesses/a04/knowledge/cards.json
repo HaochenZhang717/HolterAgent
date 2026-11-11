@@ -1,0 +1,23 @@
+{
+ "topics": {},
+ "cards": [
+  {
+   "id": "a04-1",
+   "topics": [
+    "heart_rate"
+   ],
+   "title": "In the LTST database, ischaemic episodes have steeper ST/HR slopes than heart-rate related ones",
+   "statement": "Using the Long-Term ST Database annotations, the authors plotted ST/HR diagrams of ischaemic and heart-rate related ST episodes and estimated the overall and maximal slopes of the diagrams in the exercise and recovery phase. Ischaemic ST segment deviation episodes had significantly steeper overall and maximal slopes than heart rate related episodes.",
+   "quote": "Statistical analysis shows that ischaemic ST segment deviation episodes have significantly steeper overall and maximal slopes than heart rate related episodes",
+   "direction": "both_or_neither",
+   "applies_when": "ST changes together with heart rate during the episode: a large ST change per bpm favours ischaemia, a small ST change for a large heart-rate change favours a heart-rate related episode.",
+   "limits": "Short conference paper (2012), abstract only; group-level difference, no cut-off or accuracy reported; slope is uninformative when heart rate barely changes.",
+   "source": "Faganeli Pucer J, Demšar J, Kukar M. Stud Health Technol Inform 2012;180:1108-10",
+   "pmid": "22874369",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=22874369&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  }
+ ],
+ "auto_priority": {}
+}

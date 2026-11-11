@@ -1,0 +1,39 @@
+{
+  "id": "a02",
+  "parent": "v08p",
+  "summary": "Aspect A (knowledge): v08p with card-backed reference knowledge on QRS changes during ST episodes (positional step vs ischemic gradual QRS change, K14/K15/K18/K19), on episode recurrence as neutral evidence (K42/K43/K13), and K28 replacing the uncarded COVADIS elevation entry, each with two-directional use guidance.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {}
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

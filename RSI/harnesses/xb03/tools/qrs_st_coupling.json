@@ -1,0 +1,13 @@
+{
+  "name": "qrs_st_coupling",
+  "description": "Whether a QRS change that comes with this candidate's ST change is a change of the QRS itself or the ST/J shift entering our QRS measure, lead by lead (supplied in the dossier). Per lead: QRS peak-to-peak amplitude and QRS area [before, at the lead's extremum, after] (before = 2-10 min before the candidate start, after = 2-10 min after its end), the amplitude ratio, the ST change and the J-level (J+0) change at the extremum, a reading, how step-like the QRS and ST changes are (largest change within 60 s as a share of the change at the extremum), whether the QRS returns afterwards, and the rank correlation of QRS amplitude with ST level over the candidate +-10 min; plus our J point and QRS width per period. Readings: qrs_amplitude_stable (ratio within compare_morphology's 0.75-1.33); qrs_change_within_j_shift (ratio outside, but the amplitude changed by no more than the J level moved, J shift >= 50 uV): our QRS window ends at our J point, so the shifted J end of the QRS can produce this change by itself, and compare_morphology's QRS correlation and polarity flags can be affected the same way, above all on a small QRS; qrs_change_beyond_j_shift: the QRS itself changed. How to read it, in both directions: a QRS change beyond the J shift that is step-like (share near or above 1), also present in leads without the ST change, or not returning afterwards argues for a body-position/axis or conduction change (positional changes 'have a very sudden onset and offset associated with motion artifact with no or little change in heart rate', K14). A QRS change within the J shift, or a gradual QRS change confined to the lead with the largest ST change that rises and returns with it, is weak evidence for position: in transient ischemic ST elevation R-wave voltage increased and the frontal QRS axis moved toward the injured region (K18), and in variant angina QRS duration and terminal QRS voltage rose in the leads with the largest ST displacement and returned as the episode ended (K19); then decide position on the leads with a large, unchanged QRS, the timing and the image. qrs_amplitude_stable in every lead argues against a position or conduction change as the cause. A measurement packet, not a diagnosis.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "record_id": {"type": "string"},
+      "candidate_id": {"type": "string"}
+    },
+    "required": ["record_id", "candidate_id"],
+    "additionalProperties": false
+  }
+}

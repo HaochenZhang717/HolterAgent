@@ -1,0 +1,37 @@
+{
+ "version": "xa02",
+ "note": "No new cards; this file only sets which shared cards (RSI/kb/cards.json) are retrieved first per topic, so that each finding pattern brings one card for and one against ischemia.",
+ "topics": {},
+ "cards": [],
+ "auto_priority": {
+  "_note": "heart_rate (2 cards): K04 graded by size and duration of the rise (both directions), K02 timing/threshold pattern with sensitivity and specificity. No heart-rate rise: K08 (reasoning_errors, ischemia without rise) against K36 (artifact, abrupt step without heart-rate change). QRS change or step: K14 (position_axis) against K18 (t_wave_qrs, ischemic R-wave/axis change). Depression: K24 (deep upsloping). Always: K42 (recurrence, onset heart rate).",
+  "heart_rate": [
+   "K04",
+   "K02"
+  ],
+  "reasoning_errors": [
+   "K08"
+  ],
+  "artifact": [
+   "K36"
+  ],
+  "position_axis": [
+   "K14"
+  ],
+  "t_wave_qrs": [
+   "K18"
+  ],
+  "st_shape": [
+   "K24"
+  ],
+  "temporal_context": [
+   "K42"
+  ],
+  "rhythm": [
+   "K33"
+  ],
+  "conduction": [
+   "K20"
+  ]
+ }
+}

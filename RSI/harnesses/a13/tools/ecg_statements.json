@@ -1,0 +1,20 @@
+{
+  "name": "ecg_statements",
+  "description": "ECG statements of a foundation model (ECGFounder, trained on over 10 million clinical ECGs with 150 statement categories annotated by cardiology experts) for this candidate, from 10-s windows: the dossier's reference window and windows inside the candidate. Per lead (and for the 12-lead model when lead names map to its slots): probabilities of repolarization statements (nonspecific ST, T or ST-T abnormality, repolarization abnormality, early repolarization, acute MI/STEMI, the largest injury-pattern statement), conduction (bundle branch blocks, intraventricular conduction delay, QRS widening, fascicular block), axis, rhythm and other statements, each as [reference, median inside the candidate, change]; plus the five statements that changed most from the reference in the peak lead. A second, learned view of conduction, axis, rhythm and repolarization, independent of our own measurements; uncalibrated and trained on clinical 10-s ECGs, not Holter leads, so changes against the patient's own reference say more than absolute values. A measurement packet, not a diagnosis.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "record_id": {
+        "type": "string"
+      },
+      "candidate_id": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "record_id",
+      "candidate_id"
+    ],
+    "additionalProperties": false
+  }
+}

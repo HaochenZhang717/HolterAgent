@@ -1,0 +1,42 @@
+{
+  "id": "p03",
+  "parent": "p02",
+  "summary": "Aspect C (reasoning procedure): p02 with a two-question judgement procedure (Q1 genuine transient episode or drift/level/position/noise, read first from annotator_reference; Q2 ischemic or heart-rate related, counted from three items each way) in which every measurement answers only one question, rule-outs are not filed against ischemia, and p_ischemic is read from a 3x3 table of the two answers.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "annotator_reference",
+      "rate_response"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {
+      "annotator_reference": "The candidate re-judged against an automatic time-varying ST reference built like that of Smrdel & Jager (2002), who approximated the Long-Term ST Database annotators' reference. The database annotators measured ST deviations from an ST reference function joined from local references placed in non-ischaemic stretches (K22); candidates here are detected against a record-wide median instead. Per involved lead: peak_deviation_uv signed towards the candidate (positive = same direction) against the record-wide median and after each step (after_slow_trend: 30-min mean, or 4-h mean where the two differ by more than 50 uV; after_steps: inside such stretches that contain an ST step or a QRS-shape step the reference follows the ST level; annotator_like_reference: deviations opposite to the lead's orientation, or under 25 uV in a lead of no orientation, absorbed); episode_at_100_uv and episode_at_150_uv (the LTSTDB episode rule re-applied against the final reference: start beyond 50 uV, at least 30 s at or beyond the threshold, overlapping the candidate); first_step_dropping_it_below_100_uv (none, slow_trend, step or orientation; judged on the peak only); the lead's orientation (E, D or U, from deviations outside this candidate) and the reference slope during the candidate. How to read it, in both directions: episode_at_150_uv true in an involved lead means the change still stands out as an episode against a reference that follows slow trends, steps and the lead's usual orientation, which counts for a genuine transient ST episode (it does not by itself separate ischemic from heart-rate related change). episode_at_100_uv false in every involved lead means such a reference absorbs the change, which counts against a new ischemic episode; first_step_dropping_it_below_100_uv names how (slow_trend: a drift or shifted level of the lead; step: together with an ST or QRS-shape step, as with a position, axis or conduction change; orientation: a deviation opposite to the lead's usual direction). True at 100 uV and false at 150 uV is the uncertain zone (Smrdel & Jager needed 150 uV with their automatic reference to match the database annotations), which counts in neither direction. A long real episode can pull the 30-min trend along and be partly absorbed: if the candidate is long and its onset and offset are gradual, check the ST trend before trusting an absorbed result. Evidence to weigh with the rest, not a verdict. A measurement packet, not a diagnosis."
+    }
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

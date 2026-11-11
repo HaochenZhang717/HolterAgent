@@ -1,0 +1,912 @@
+{
+ "version": "2026-10-14",
+ "note": "Each card paraphrases one source opened during this task (PubMed records via NCBI E-utilities, or full text via PMC, publisher, J-STAGE, PhysioNet or a Wayback copy); quotes and numbers were checked verbatim against that text, and no locally computed (LTSTDB) statistics are used.",
+ "topics": {
+  "heart_rate": "Heart-rate related ST change vs demand ischemia: timing/lag of HR and ST, size and duration of HR rise, ischemic threshold, hysteresis, proportional ST/HR response.",
+  "position_axis": "Body-position and electrical-axis shifts that move the ST level.",
+  "conduction": "Intermittent bundle-branch block and other QRS conduction changes.",
+  "measurement": "J point, ST measurement point (J+60/J+80, HR-dependent), steep upsloping ST, choice of reference baseline, drift.",
+  "st_shape": "Horizontal, downsloping, upsloping or scooped ST; magnitude and duration criteria; onset time course.",
+  "st_elevation": "Transient ST elevation, vasospasm, and non-ischemic elevation (early repolarization).",
+  "rhythm": "SVT, atrial fibrillation and other tachyarrhythmias, ectopy, rate-related ST change during tachyarrhythmia.",
+  "artifact": "Noise, electrode, gain and motion artifacts.",
+  "t_wave_qrs": "T-wave changes, pseudo-normalisation, and QRS changes that accompany ischemia.",
+  "eligibility": "LVH, LBBB, pre-excitation, IVCD, digoxin and other conditions that make ST hard to interpret.",
+  "temporal_context": "Circadian/nocturnal patterns, episode frequency, repeatability, comparison with the patient's other episodes.",
+  "reasoning_errors": "Known wrong inferences when judging ST episodes, each tied to a source."
+ },
+ "cards": [
+  {
+   "id": "K01",
+   "topics": [
+    "heart_rate"
+   ],
+   "title": "Heart rate peaks about 80 s before maximal ischemic ST depression",
+   "statement": "In 5 patients with nocturnal and daytime angina and 6 with daytime angina only, all with severe obstructive CAD, heart rate rose before ST depression in 16 of 17 nocturnal and all daytime ambulatory episodes. Peak heart rate came on average 80.7 s before the deepest ST depression, and in most episodes heart rate had returned to baseline while ST was still depressed.",
+   "quote": "The maximum heart rate during individual episodes preceded the maximum ST-segment depression by a mean 80.7 s",
+   "direction": "favours_ischemia",
+   "applies_when": "Heart rate rises before onset, peaks before the ST extremum, and returns toward baseline while ST depression persists (ST recovery lags heart-rate recovery).",
+   "limits": "Small study (5 + 6 patients), 1984, abstract only; no heart-rate-related comparison group; lags shorter than the tools' time resolution cannot be judged.",
+   "source": "Quyyumi AA et al., Lancet 1984;1(8388):1207-9",
+   "pmid": "6144924",
+   "doi": "10.1016/s0140-6736(84)91693-3",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=6144924&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K02",
+   "topics": [
+    "heart_rate"
+   ],
+   "title": "Flat-then-steep ST/HR response, or depression persisting as heart rate falls",
+   "statement": "In 70 patients (53 with ischemic heart disease, 17 with angiographically normal coronaries) studied with ambulatory ECG plus pedometer during walking, an ischemic response was defined as ST staying level until a heart-rate threshold and then changing at -0.025 mm/bpm or steeper, or ST depression continuing after exertion while heart rate fell (counterclockwise HR-ST loop). Sensitivity was 79.2% and specificity 94%.",
+   "quote": "the ST segment level did not decline until HR increased to a certain threshold",
+   "direction": "favours_ischemia",
+   "applies_when": "ST stays level over lower heart rates and then falls steeply above a knee heart rate, or ST stays depressed while heart rate is already falling.",
+   "limits": "70 patients, 1996, abstract; only pedometer-confirmed walking periods analysed; -0.025 mm/bpm (about -2.5 µV/bpm at 10 mm/mV) not validated elsewhere.",
+   "source": "Ino-Oka E et al., Clin Cardiol 1996;19(6):467-72",
+   "pmid": "8790950",
+   "doi": "10.1002/clc.4960190605",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=8790950&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K03",
+   "topics": [
+    "heart_rate",
+    "reasoning_errors"
+   ],
+   "title": "Most daily-life ischemic episodes follow a heart-rate rise; crossings not always",
+   "statement": "In 54 patients with stable CAD and a positive exercise test monitored for 48 h, 320 of 359 ischemic episodes (89%) followed a heart-rate rise of at least 10 bpm, the largest rise (22.3 +/- 10 bpm) occurring in the 5 min before onset. Each time heart rate reached the patient's exercise ischemic threshold, an episode followed in 80% of instances.",
+   "quote": "An ischemic episode occurred 80% of the times the heart rate reached the exercise ischemic threshold.",
+   "direction": "caution",
+   "applies_when": "Episode preceded by a heart-rate rise; or another surge to a similar heart rate elsewhere in the record shows no ST change.",
+   "limits": "54 patients, 1992, abstract; threshold came from an exercise test, unavailable on Holter; some threshold crossings produced no episode, so one flat surge elsewhere is weak evidence.",
+   "source": "Panza JA et al., J Am Coll Cardiol 1992;20(5):1092-8",
+   "pmid": "1401608",
+   "doi": "10.1016/0735-1097(92)90363-r",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=1401608&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K04",
+   "topics": [
+    "heart_rate",
+    "temporal_context"
+   ],
+   "title": "Ischemia likelihood grows with the size and duration of heart-rate rises",
+   "statement": "In 50 stable CAD patients (ASIS trial, 48-h ambulatory ECG on propranolol, diltiazem, nifedipine or placebo), 81% of ischemic episodes followed a heart-rate rise of at least 5 bpm. The chance that a rise led to ischemia ranged from 4% (5-9 bpm, under 10 min) to 60% (20 bpm or more, 40 min or more). Episodes without a preceding rise were spread evenly over the day.",
+   "quote": "The likelihood of developing ischemia associated with a heart rate increase was proportional to the magnitude and duration of the heart rate increase",
+   "direction": "both_or_neither",
+   "applies_when": "A heart-rate rise precedes the episode (judge its size in bpm and duration in min); or no heart-rate rise precedes it at all.",
+   "limits": "50 patients, 1993, abstract; group-level probabilities; drugs changed heart-rate patterns; vasoconstriction as cause of non-heart-rate episodes is the authors' interpretation.",
+   "source": "Andrews TC et al., Circulation 1993;88(1):92-100",
+   "pmid": "8319361",
+   "doi": "10.1161/01.cir.88.1.92",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=8319361&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K05",
+   "topics": [
+    "heart_rate",
+    "reasoning_errors"
+   ],
+   "title": "The heart-rate rise before daily-life ischemia starts 5-30 minutes earlier",
+   "statement": "In 21 patients with proven CAD (212 episodes in 504 h of ECG monitoring), heart rate climbed from 74 +/- 11 to 90 +/- 14 bpm between 5 and 30 min before onset, not in the final minute. A slower but longer exercise protocol provoked ischemia at 88 +/- 14 bpm versus 103 +/- 15 bpm on the Bruce protocol, so sustained elevation appears to lower the threshold.",
+   "quote": "Duration of heart rate increase appears to influence the heart rate threshold for ischemia",
+   "direction": "caution",
+   "applies_when": "Heart rate is flat in the last minute before onset but was raised over the preceding 5-30 min, or was moderately elevated for a long time.",
+   "limits": "21 patients, 1991, abstract; threshold comparison partly from exercise tests; drug effects (propranolol moved episodes to lower heart rates) are invisible on the ECG.",
+   "source": "McLenachan JM et al., Circulation 1991;83(4):1263-70",
+   "pmid": "1901527",
+   "doi": "10.1161/01.cir.83.4.1263",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=1901527&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K06",
+   "topics": [
+    "reasoning_errors",
+    "heart_rate"
+   ],
+   "title": "A stable final minute of heart rate does not exclude ischemia",
+   "statement": "In 30 patients with stable angina and positive exercise tests (1934 episodes over 446 days of ambulatory ST monitoring), heart rate at onset of ST depression averaged 98 +/- 20.5 bpm, below the onset rate during exercise testing (124 +/- 17 bpm). Heart rate had risen by more than 10 beats in the minute before onset in only 23% of episodes.",
+   "quote": "Heart rate rose by more than 10 beats in the minute preceding ST depression in only 23% of episodes.",
+   "direction": "caution",
+   "applies_when": "Heart rate is flat or rises less than 10 bpm in the minute before onset, or onset heart rate is well below exercise-type levels.",
+   "limits": "30 patients, 1983, abstract; looked only at the final minute (cf. McLenachan 1991); positron tomography supported ischemia in studied episodes.",
+   "source": "Deanfield JE et al., Lancet 1983;2(8353):753-8",
+   "pmid": "6137600",
+   "doi": "10.1016/s0140-6736(83)92295-x",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=6137600&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K07",
+   "topics": [
+    "reasoning_errors",
+    "heart_rate"
+   ],
+   "title": "The ischemic heart-rate threshold varies widely within one patient",
+   "statement": "In 80 CAD patients with at least 2 ischemic episodes during 24-hour Holter (895 episodes), each patient's lowest onset heart rate averaged 85 bpm and the highest 109 bpm. The gap between highest and lowest threshold ranged from 2 to 60% and grew with the number of episodes; 74% of episodes followed a heart-rate increase of more than 10%.",
+   "quote": "The mean lowest ischemic threshold was 85 beats/min, and the mean highest ischemic threshold was 109 beats/min.",
+   "direction": "caution",
+   "applies_when": "Another surge in the same record reached an equal or higher heart rate without ST change, or episodes start at very different heart rates.",
+   "limits": "80 patients, 1990, abstract; threshold = onset heart rate; one 24-h recording; does not say how to separate heart-rate-related change.",
+   "source": "Banai S et al., Am J Cardiol 1990;66(20):1403-6",
+   "pmid": "2251985",
+   "doi": "10.1016/0002-9149(90)90523-4",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=2251985&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K08",
+   "topics": [
+    "reasoning_errors",
+    "heart_rate"
+   ],
+   "title": "Ischemic episodes can start with no heart-rate rise or a fall",
+   "statement": "In 7 asymptomatic patients with angiographic CAD and silent positive exercise tests (384 h of Holter monitoring), 37 episodes of ST depression of 1 mm or more were recorded. A small heart-rate rise (1 to 34 bpm) preceded 65% of them, whereas 35% showed no change or even a decline before onset; 54% occurred at rest or during light activity.",
+   "quote": "35% were associated with no change or even a decline before the onset of ischemia",
+   "direction": "caution",
+   "applies_when": "No heart-rate rise, or a heart-rate fall, precedes the ST change; episode occurs at rest-level heart rate.",
+   "limits": "Very small (7 patients, 37 episodes), 1986, abstract; asymptomatic CAD; ischemia defined by ST criteria only.",
+   "source": "Campbell S et al., Am J Cardiol 1986;57(13):1010-6",
+   "pmid": "3706153",
+   "doi": "10.1016/0002-9149(86)90666-1",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=3706153&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K09",
+   "topics": [
+    "reasoning_errors",
+    "heart_rate"
+   ],
+   "title": "Expert readers treat a concurrent heart-rate rise as supporting ischemia",
+   "statement": "In a secondary analysis of 361 patients with suspected ACS monitored by 12-lead Holter (COMPARE study), automated ST algorithms missed a -91 µV ST-depression event that the human reader had counted as transient ischemia. The authors suggest the reader may have combined the accompanying heart-rate rise with the ST depression as evidence for ischemia.",
+   "quote": "the human reader may have taken into account the concomitant increased heart rate during the ST-segment changes",
+   "direction": "caution",
+   "applies_when": "ST depression accompanies a heart-rate rise and the reviewer leans toward 'heart-rate related' because ST moves with heart rate.",
+   "limits": "One illustrative case with the authors' tentative explanation; hospital ACS population, 12-lead; not a measured discrimination rule.",
+   "source": "Pelter MM et al., J Electrocardiol 2018;51(2):288-95",
+   "pmid": "29129350",
+   "doi": "10.1016/j.jelectrocard.2017.10.005",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5845470/",
+   "access": "full_text",
+   "verified": true
+  },
+  {
+   "id": "K10",
+   "topics": [
+    "heart_rate",
+    "st_shape"
+   ],
+   "title": "Healthy volunteers can show horizontal or downsloping depression during tachycardia",
+   "statement": "In 120 healthy volunteers on ambulatory ECG (FM recorder), 10 had horizontal or downsloping ST depression of 1-2 mm, mostly during tachycardia (135 +/- 10.5 bpm). Of 9 who then exercised on a bicycle, 8 developed widespread ST depression. The authors note that such changes are often read as ischemia in patients with coronary disease.",
+   "quote": "horizontal or downsloping ST segment depression (range 1-2 mm) was recorded, usually in association with tachycardia (135 +/- 10.5 beats/min)",
+   "direction": "caution",
+   "applies_when": "Horizontal or downsloping ST depression that appears only at high sinus heart rates (around 130 bpm or more) and resolves as heart rate falls.",
+   "limits": "Healthy, mostly under-40 subjects, 1983, abstract; no CAD patients; old FM recorders; does not show such changes are non-ischemic in CAD.",
+   "source": "Quyyumi AA et al., Br Heart J 1983;50(5):460-4",
+   "pmid": "6639817",
+   "doi": "10.1136/hrt.50.5.460",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=6639817&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K11",
+   "topics": [
+    "temporal_context",
+    "heart_rate"
+   ],
+   "title": "The ischemic heart-rate threshold is lowest in the early night hours",
+   "statement": "In 41 stable CAD patients with 7 days of ambulatory monitoring (1371 episodes), episodes peaked 7:00-11:00 AM and 6:00-9:00 PM, but onset heart rate (ischemic threshold) was lowest between 1:00 and 3:00 AM and highest between 10 AM and 1 PM. The authors suggest low night-time thresholds reflect raised coronary tone; in beta-blocked patients the threshold showed no circadian change.",
+   "quote": "it was lowest between 1:00 and 3:00 AM and highest between 10 AM and 1 PM",
+   "direction": "caution",
+   "applies_when": "Nocturnal episode starting at a lower heart rate than the patient's daytime episodes or than daytime surges that caused no ST change.",
+   "limits": "41 patients, 1993, abstract; 18 on low-dose beta-blockers; coronary-tone mechanism is inferred, not measured.",
+   "source": "Benhorin J et al., Circulation 1993;87(3):808-14",
+   "pmid": "8095188",
+   "doi": "10.1161/01.cir.87.3.808",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=8095188&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K12",
+   "topics": [
+    "position_axis",
+    "artifact",
+    "measurement"
+   ],
+   "title": "Six non-ischemic causes of false ST events in continuous monitoring",
+   "statement": "In 292 coronary-care patients on 12-lead ST monitoring (average 41 h), 117 (40%) had false-positive ST events, 506 in all: body-position change 36%, sudden QRS/ST voltage increase 26%, transient arrhythmia or pacing 19%, heart-rate change on steeply sloped ST segments 16%, noisy signal 5%, and lead misplacement 1%.",
+   "quote": "The 506 false positive events included 167 (36%) due to body positional change; 132 (26%) due to sudden increase in QRS complex/ST-segment voltage",
+   "direction": "caution",
+   "applies_when": "Any candidate: check for posture-related QRS change, abrupt QRS/ST amplitude step, arrhythmia or pacing, heart-rate change with a steep ST slope, noise, lead change.",
+   "limits": "Unstable coronary in-patients, bedside 12-lead monitoring, 1998, abstract; frequencies may differ for 2-3-lead ambulatory Holter.",
+   "source": "Drew BJ et al., J Electrocardiol 1998;30 Suppl:157-65",
+   "pmid": "9535494",
+   "doi": "10.1016/s0022-0736(98)80067-8",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9535494&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K13",
+   "topics": [
+    "position_axis"
+   ],
+   "title": "Body-position change is the commonest cause of false ST alarms",
+   "statement": "Among 96 cardiac telemetry patients, a subgroup of 30 was monitored continuously: 9 (30%) had at least one ST event caused by a change of body position, 25 false-positive events in all. Comparing alarm ECGs with templates recorded supine, right, left and upright identified 18 of the 25 (73%); the authors judged a body-position sensor superior.",
+   "quote": "Body positional change is the most frequent cause of false positive ST-segment monitor alarms.",
+   "direction": "caution",
+   "applies_when": "ST shift coinciding with a QRS morphology change, at times compatible with lying down or turning, with the same QRS/ST state recurring elsewhere in the record.",
+   "limits": "In-hospital telemetry, 2002, abstract; the quoted sentence is the authors' background statement; position templates are not available retrospectively.",
+   "source": "Adams MG, Drew BJ, J Electrocardiol 2002;35 Suppl:193-200",
+   "pmid": "12539117",
+   "doi": "10.1054/jelc.2002.37181",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=12539117&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K14",
+   "topics": [
+    "position_axis"
+   ],
+   "title": "Positional ST shifts: sudden onset/offset, little heart-rate change, taller R waves",
+   "statement": "In Holter recordings (lead CM5) of 66 patients with acute ischemic syndrome (EMIT trial), the authors describe positional ST shifts as starting and stopping very abruptly with motion artifact and little or no heart-rate change, often with taller R waves during the shift. Excluding positional changes cut the number of ischemic episodes from 227 to 136.",
+   "quote": "Positional changes characteristically have a very sudden onset and offset associated with motion artifact with no or little change in heart rate.",
+   "direction": "favours_non_ischemic",
+   "applies_when": "Step-like ST onset and offset, R-wave amplitude change at the same moment, motion artifact, and little heart-rate change.",
+   "limits": "One dataset, one lead, 2003; descriptive signature, not a validated rule; ischemia can also occur at rest without heart-rate change.",
+   "source": "Bjerregaard P et al., Ann Noninvasive Electrocardiol 2003;8(3):200-7",
+   "pmid": "14510654",
+   "doi": "10.1046/j.1542-474x.2003.08306.x",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6931939/",
+   "access": "full_text",
+   "verified": true
+  },
+  {
+   "id": "K15",
+   "topics": [
+    "position_axis",
+    "reasoning_errors"
+   ],
+   "title": "QRS and ST positional changes are not proportional in size",
+   "statement": "In 21 healthy subjects on continuous vectorcardiography, body-position changes produced significant QRS-vector changes in 15 (71%) and ST-vector changes in 6 (29%), most often in the left lateral position. The size of the positional QRS change was not significantly related to the size of the ST change (R = .13, P = .57).",
+   "quote": "There was no statistically significant association between positional QRS-VD and STC-VM changes (R = .13, P = .57).",
+   "direction": "caution",
+   "applies_when": "A QRS morphology step occurs at the same moment as an ST step, but the QRS change looks small (or large) relative to the ST change.",
+   "limits": "21 healthy subjects, orthogonal-lead vectorcardiography, 2000, abstract; no ischemic episodes; transfer to 2-3 bipolar Holter leads untested.",
+   "source": "Nørgaard BL et al., J Electrocardiol 2000;33(1):23-30",
+   "pmid": "10691171",
+   "doi": "10.1016/s0022-0736(00)80097-7",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=10691171&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K16",
+   "topics": [
+    "position_axis",
+    "st_shape"
+   ],
+   "title": "Ischemic ST deviation builds gradually over 15-20 minutes",
+   "statement": "In 12 emergency-department chest-pain patients on 12-lead Holter (preliminary report), most patients' ischemic ST deviation started as a sub-threshold shift of a few microvolts and grew slowly over 15 to 20 minutes before peaking. In a 4-position protocol, body-position changes could be recognised by tracking the dynamics of the QRS pattern and axis.",
+   "quote": "the microvolt-level, subthreshold deviation of the ST segment developed gradually, over 15 to 20 minutes, until it reached the maximum, superthreshold level.",
+   "direction": "favours_ischemia",
+   "applies_when": "ST deviation ramps up over many minutes with a small subthreshold lead-in, rather than stepping within a minute, while the QRS pattern stays unchanged.",
+   "limits": "12 patients with acute chest pain (supply ischemia likely), preliminary, 2007, abstract; ramp duration of demand ischemia on ambulatory Holter not quantified.",
+   "source": "Shusterman V et al., J Electrocardiol 2007;40(6 Suppl):S179-86",
+   "pmid": "17993319",
+   "doi": "10.1016/j.jelectrocard.2007.06.015",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=17993319&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K17",
+   "topics": [
+    "position_axis",
+    "measurement"
+   ],
+   "title": "Small ST deviations: more positional false positives, poor reader agreement",
+   "statement": "In unstable CAD patients on continuous 12-lead ECG, a criterion of ST deviation of 0.1 mV or more for 1 min gave interobserver kappa 0.72 (100 patients), and 8 of 50 patients (16%) had significant ST changes from body position. Allowing ST depression of 0.05 mV (or elevation of 0.1 mV), kappa fell to 0.32 and 21 (42%) had positional changes.",
+   "quote": "When the second set of criteria were used, the interobserver agreement was poor (kappa = 0.32)",
+   "direction": "caution",
+   "applies_when": "Peak ST deviation between about 50 and 100 µV, or a change close to the episode threshold.",
+   "limits": "In-hospital 12-lead monitoring, 2002, abstract; agreement on detecting episodes, not on ischemic versus non-ischemic labels.",
+   "source": "Jernberg T et al., Ann Noninvasive Electrocardiol 2002;7(3):181-90",
+   "pmid": "12167177",
+   "doi": "10.1111/j.1542-474x.2002.tb00161.x",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=12167177&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K18",
+   "topics": [
+    "t_wave_qrs",
+    "position_axis"
+   ],
+   "title": "Transient ischemic ST elevation can raise R waves and shift the axis",
+   "statement": "In 6 patients with transient chest pain and ST elevation, R-wave voltage increased and the frontal QRS axis moved toward the injured region during the episode. The authors attribute this to regional ischemic conduction block rather than true hemiblock.",
+   "quote": "displayed concomitant shift of the frontal QRS axis toward the locus of injury",
+   "direction": "caution",
+   "applies_when": "R-wave amplitude or QRS axis changes together with the ST change, gradually and mostly in the lead with the largest ST deviation.",
+   "limits": "6 patients with Prinzmetal-type (transmural) injury, 1980, short abstract; not shown for demand ST depression.",
+   "source": "Schick EC et al., J Electrocardiol 1980;13(3):259-66",
+   "pmid": "7410997",
+   "doi": "10.1016/s0022-0736(80)80029-x",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=7410997&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K19",
+   "topics": [
+    "t_wave_qrs",
+    "conduction",
+    "reasoning_errors"
+   ],
+   "title": "Ischemia itself can lengthen the QRS and raise terminal QRS voltage",
+   "statement": "In 5 patients with variant angina (15 ischemic episodes, orthogonal leads), QRS duration lengthened and terminal 40 msec QRS voltage rose in the lead(s) with the largest ST displacement, quickly returning to baseline as the episode ended. Within a patient the QRS change had the same direction every episode; dog experiments tied it to slowed conduction in the ischemic zone.",
+   "quote": "In all patients there was prolongation of the QRS duration and an increase in QRS voltage during the terminal 40 msec of the waveform",
+   "direction": "caution",
+   "applies_when": "QRS widens or terminal QRS amplitude grows during the ST change, gradually, in the lead with the largest ST deviation, and reverses as ST recovers.",
+   "limits": "5 patients with coronary spasm (transmural ischemia), 1985, abstract; size of such changes in demand ST-depression episodes unknown.",
+   "source": "Barnhill JE et al., Circulation 1985;71(5):901-11",
+   "pmid": "3986980",
+   "doi": "10.1161/01.cir.71.5.901",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=3986980&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K20",
+   "topics": [
+    "conduction"
+   ],
+   "title": "Rate-dependent LBBB appearing at 125 bpm or more: no CAD",
+   "statement": "Among 2584 patients with treadmill testing and coronary angiography, 28 (1.1%) developed rate-dependent LBBB during exercise. All 10 whose LBBB appeared at 125 bpm or higher had no CAD, whereas 9 of 18 with onset below 125 bpm had CAD.",
+   "quote": "All 10 patients in whom LBBB developed at a heart rate of 125 beats/min or higher were free of CAD",
+   "direction": "favours_non_ischemic",
+   "applies_when": "QRS widens (bundle-branch-block-like) as heart rate rises and narrows when it falls, with secondary ST-T change during the wide beats.",
+   "limits": "Exercise test, 28 patients with rate-dependent LBBB, 1985, abstract; predicts coronary anatomy, not ischemia in an episode; ST during LBBB is not interpretable.",
+   "source": "Vasey C et al., Am J Cardiol 1985;56(13):892-5",
+   "pmid": "4061330",
+   "doi": "10.1016/0002-9149(85)90777-5",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=4061330&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K21",
+   "topics": [
+    "measurement"
+   ],
+   "title": "LTSTDB measures ST at a heart-rate-dependent point after J",
+   "statement": "In the Long-Term ST Database protocol, ST amplitude was measured on 16 s averaged beats with annotator-adjusted isoelectric and J points, at J+80 ms below 100 bpm, J+72 ms from 100 to below 110 bpm, J+64 ms from 110 to below 120 bpm, and J+60 ms at 120 bpm or more.",
+   "quote": "ST amplitudes were measured at J + 80 ms, if HR was less than 100 beats min⁻¹",
+   "direction": "caution",
+   "applies_when": "Heart rate crosses 100, 110 or 120 bpm during the episode, especially when the ST segment is steeply upsloping.",
+   "limits": "Database protocol description (2003), not a physiological finding; size of any shift depends on ST slope (see Drew 1998 on steep-slope false events).",
+   "source": "Jager F et al., Med Biol Eng Comput 2003;41(2):172-82",
+   "pmid": "12691437",
+   "doi": "10.1007/BF02344885",
+   "url": "https://physionet.org/files/ltstdb/1.0.0/lt03/lt03.html",
+   "access": "full_text",
+   "verified": true
+  },
+  {
+   "id": "K22",
+   "topics": [
+    "measurement"
+   ],
+   "title": "Reference ST deviation is measured from local, annotator-placed references",
+   "statement": "In the Long-Term ST Database, annotators tracked the time-varying ST level by placing local references in non-ischemic stretches, joined by straight lines into an ST reference function; deviations were measured from this function. Annotators manually adjusted isoelectric and J points at chosen times, around the start, peak and end of ST episodes and otherwise roughly every 20 min.",
+   "quote": "Annotations (known as local references) were placed at intervals in the non-ischaemic data and were connected with straight-line segments to produce the ST reference function",
+   "direction": "caution",
+   "applies_when": "The candidate is defined against a record-wide reference while the local ST level just before it is shifted, or the candidate sits between two episodes.",
+   "limits": "One database's annotation protocol (2003); references were placed with knowledge of episodes; automated local-baseline tracking only approximates it.",
+   "source": "Jager F et al., Med Biol Eng Comput 2003;41(2):172-82",
+   "pmid": "12691437",
+   "doi": "10.1007/BF02344885",
+   "url": "https://physionet.org/files/ltstdb/1.0.0/lt03/lt03.html",
+   "access": "full_text",
+   "verified": true
+  },
+  {
+   "id": "K23",
+   "topics": [
+    "measurement"
+   ],
+   "title": "Correcting for pre-event baseline ST sharply cut Holter ischemia findings",
+   "statement": "In 66 patients with acute ischemic syndrome (EMIT trial, lead CM5), 16 (24%) had Holter ischemic events with J+80 measurement, 10 (15%) if J-point depression was also required, and only 3 (4.5%) after correcting for baseline ST depression. The correction used a 5-min period within 30 min before the event when heart rate was relatively slow and steady and ST steady.",
+   "quote": "we corrected for ST deviation in a 5‐minute period within 30 minutes prior to the ischemic event",
+   "direction": "caution",
+   "applies_when": "ST shortly before the candidate (resting, steady heart rate) already differs from the record-wide reference, so the change from local baseline is much smaller.",
+   "limits": "Single dataset, one lead, 2003; few remaining positives; the authors' own baseline window, not a standard.",
+   "source": "Bjerregaard P et al., Ann Noninvasive Electrocardiol 2003;8(3):200-7",
+   "pmid": "14510654",
+   "doi": "10.1046/j.1542-474x.2003.08306.x",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6931939/",
+   "access": "full_text",
+   "verified": true
+  },
+  {
+   "id": "K24",
+   "topics": [
+    "st_shape"
+   ],
+   "title": "Deep J depression with slowly upsloping ST carries CAD like horizontal",
+   "statement": "In 230 patients with exercise-induced junctional ST depression and angiography, multivessel disease was rare when J depression was under 1.5 mm. With J depression over 2 mm and ST still depressed 2 mm or more 0.08 s after J (slow upsloping), 94% had 50% or greater stenosis, similar to horizontal or downsloping patterns (96% and 97%).",
+   "quote": "Junctional depression of more than 2 mm is associated with the same incidence of coronary disease when the S-T segment is slowly ascending",
+   "direction": "caution",
+   "applies_when": "Upsloping ST depression that is still deep (about 2 mm, roughly 200 µV) at J+80, which shape alone might label heart-rate related.",
+   "limits": "Exercise test, 1977, abstract; predicts coronary anatomy, not ischemia in an episode; conflicts with Desai 2002.",
+   "source": "Kurita A et al., Am J Cardiol 1977;40(4):492-7",
+   "pmid": "910713",
+   "doi": "10.1016/0002-9149(77)90061-3",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=910713&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K25",
+   "topics": [
+    "st_shape"
+   ],
+   "title": "Slow upsloping exercise ST depression behaves like rapid upsloping",
+   "statement": "In exercise-test patients with SPECT imaging, perfusion ischemia was found in 39% of 33 with rapid upsloping ST depression, 25% of 32 with slow upsloping depression (>1.5 mm, extending more than 0.08 s past J) and 77% of 35 with horizontal or downsloping depression (>1 mm at 0.08 s). The authors regard slow upsloping depression as low likelihood for CAD.",
+   "quote": "it would be reasonable to consider patients with slow upsloping ST depression during exercise as having a very low likelihood of CAD",
+   "direction": "favours_non_ischemic",
+   "applies_when": "Upsloping ST depression at raised heart rate, compared with horizontal or downsloping depression of similar size.",
+   "limits": "Exercise test, 100 patients, 2002, abstract; SPECT reference; contradicts Kurita 1977; not directly transferable to ambulatory episodes.",
+   "source": "Desai MY et al., Am Heart J 2002;143(3):482-7",
+   "pmid": "11868055",
+   "doi": "10.1067/mhj.2002.120771",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=11868055&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K26",
+   "topics": [
+    "st_shape"
+   ],
+   "title": "Holter depression deeper than 0.20 mV was absent in healthy older men",
+   "statement": "In 63 healthy men aged 51-75 (Copenhagen City Heart Study), 24-hour Holter specificity was 1.0 when significant deviation required horizontal or downsloping depression over 0.20 mV or elevation of 0.15 mV or more, and 0.95 for horizontal or downsloping depression of 0.15 mV or more. The authors advise 0.15 mV when only one test is used.",
+   "quote": "if one test alone is used, the criterion of significant ST-segment depression should be 0.15 mV",
+   "direction": "favours_ischemia",
+   "applies_when": "Horizontal or downsloping ST depression clearly deeper than 150-200 µV relative to baseline during the episode.",
+   "limits": "63 healthy men only, 1999, abstract; specificity without a diseased comparison; says nothing about heart-rate-related change in CAD patients.",
+   "source": "Vaage-Nilsen M et al., Am Heart J 1999;137(6):1070-4",
+   "pmid": "10347333",
+   "doi": "10.1016/s0002-8703(99)70364-9",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=10347333&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K27",
+   "topics": [
+    "artifact",
+    "st_shape"
+   ],
+   "title": "Shape clues separate artifactual from genuine Holter ST depression",
+   "statement": "Among 85 screened healthy subjects on 24-hour Holter, 6 (7.1%) met amplitude and duration criteria (horizontal or descending depression of at least 0.1 mV; 24 episodes). Extra shape checks - sudden onset, PQ and ST segments shifted in the same direction, or R and P amplitudes rising together - identified artifacts in 4; only 2 (2.4%) stayed unexplained.",
+   "quote": "sudden onset of ST segment depression, identical orientation of PQ and ST segments, or simultaneous increase in R and P wave amplitude",
+   "direction": "favours_non_ischemic",
+   "applies_when": "Abrupt ST onset, PQ segment moving together with the ST segment, or R and P waves growing at the same time as the ST change.",
+   "limits": "85 healthy subjects, few positives, 1992, abstract; criteria not validated in CAD patients.",
+   "source": "Völler H et al., Am Heart J 1992;124(3):622-9",
+   "pmid": "1514489",
+   "doi": "10.1016/0002-8703(92)90269-2",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=1514489&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K28",
+   "topics": [
+    "st_elevation"
+   ],
+   "title": "Spasm ischemia: ST elevation with reciprocal depression, sometimes depression only",
+   "statement": "The JCS 2013 vasospastic angina guideline states that attacks typically show ST elevation in leads facing the culprit artery with ST depression in contralateral leads, but some show only ST depression in contiguous leads, apparently depending on how severe the spasm or ischemia is. It names Holter the most useful test because attacks cluster at rest from night to early morning.",
+   "quote": "Typical ECG changes during attacks of vasospastic angina include ST elevation in leads corresponding to the culprit lesion and ST depression in contralateral leads.",
+   "direction": "favours_ischemia",
+   "applies_when": "Transient ST elevation in one lead with opposite-sign deviation in a lead facing another territory, at rest, at night or early morning.",
+   "limits": "Consensus guideline (digest version) based on 12-lead data; 2-3 Holter leads may not cover reciprocal territories.",
+   "source": "JCS Joint Working Group (JCS 2013, digest version), Circ J 2014;78(11):2779-801",
+   "pmid": "25273915",
+   "doi": "10.1253/circj.CJ-66-0098",
+   "url": "https://www.jstage.jst.go.jp/article/circj/78/11/78_CJ-66-0098/_html/-char/en",
+   "access": "full_text",
+   "verified": true
+  },
+  {
+   "id": "K29",
+   "topics": [
+    "st_elevation",
+    "heart_rate"
+   ],
+   "title": "ST shifts at normal heart rate support spasm-related ischemia",
+   "statement": "The 2019 ESC chronic coronary syndromes guideline, in its vasospastic angina section, states that ST-segment shifts occurring at a normal heart rate make ischemia from coronary spasm more likely, and that ambulatory ECG, preferably with 12 leads, may help when vasospastic angina is suspected.",
+   "quote": "The occurrence of ST-segment shifts at normal heart rate supports the likelihood of myocardial ischaemia caused by spasm.",
+   "direction": "favours_ischemia",
+   "applies_when": "Transient ST shift (elevation or depression) at a normal resting heart rate with no preceding heart-rate rise.",
+   "limits": "Guideline narrative for suspected vasospastic angina, consensus level; a normal heart rate does not rule out position, artifact or drift.",
+   "source": "Knuuti J et al. (ESC), Eur Heart J 2020;41(3):407-77",
+   "pmid": "31504439",
+   "doi": "10.1093/eurheartj/ehz425",
+   "url": "https://academic.oup.com/eurheartj/article/41/3/407/5556137",
+   "access": "full_text",
+   "verified": true
+  },
+  {
+   "id": "K30",
+   "topics": [
+    "st_elevation",
+    "temporal_context"
+   ],
+   "title": "Vasospastic ST elevation clusters from midnight to 9 AM; arrhythmias during recovery",
+   "statement": "In 26 patients with variant angina on ambulatory ECG, 364 ST elevations of 1 mm or more were recorded; 79% were asymptomatic and 72% occurred between 0:00 and 9:00 (13% between 5:00 and 6:00). Arrhythmias were more frequent while ST was returning toward baseline (38 times) than while it was rising (8 times).",
+   "quote": "Arrhythmias occurred more frequently when the elevated ST segment started to return or was returning to the control level (n = 38)",
+   "direction": "favours_ischemia",
+   "applies_when": "Transient ST elevation at night or early morning, especially with ectopy or arrhythmia appearing as ST returns to baseline.",
+   "limits": "26 variant-angina patients, 1983, abstract; such episodes are uncommon in stable demand-ischemia populations.",
+   "source": "Araki H et al., Circulation 1983;67(5):995-1000",
+   "pmid": "6682020",
+   "doi": "10.1161/01.cir.67.5.995",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=6682020&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K31",
+   "topics": [
+    "st_elevation",
+    "heart_rate",
+    "temporal_context"
+   ],
+   "title": "Nocturnal CAD depression follows heart-rate rises; spasm episodes usually do not",
+   "statement": "In 10 patients with nocturnal angina studied with polysomnography and ECG, all 42 ST-depression episodes in the 8 with obstructive CAD or a low exercise threshold followed a heart-rate rise from arousal, lighter sleep, movement, REM sleep or, once, apnoea. In the 2 variant-angina patients, 23 of 26 episodes of ST depression or elevation had no preceding heart-rate rise, arousal or apnoea.",
+   "quote": "in the variant angina group no increase in heart rate, arousal, or apnoea preceded 23 of the 26 episodes of ST segment change",
+   "direction": "both_or_neither",
+   "applies_when": "Nocturnal episode: check whether heart rate rose before onset (demand pattern) or stayed flat (spasm pattern); both patterns are compatible with ischemia.",
+   "limits": "10 patients (2 with spasm), 1986, abstract; sleep staging is not available on Holter.",
+   "source": "Quyyumi AA et al., Br Heart J 1986;56(4):346-52",
+   "pmid": "3768213",
+   "doi": "10.1136/hrt.56.4.346",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=3768213&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K32",
+   "topics": [
+    "st_elevation",
+    "heart_rate"
+   ],
+   "title": "Early-repolarization ST elevation appears at slow rates and vanishes faster",
+   "statement": "In 9,200 consecutive 24-h Holter recordings, 410 people had J-point ST elevation of 1 mm or more in at least 2 of 3 leads for 3 min or longer. In 382 (93.1%) this early-repolarization pattern was intermittent: present below about 70 bpm, gone once heart rate exceeded 65-75 bpm, back when it slowed, usually 10-20 times a day.",
+   "quote": "the typical ER pattern was intermittent, i.e., seen only below heart rate (HR) of about 70/min",
+   "direction": "favours_non_ischemic",
+   "applies_when": "J-point/ST elevation present at slow heart rates that disappears whenever heart rate rises and recurs many times over 24 h with the same shape.",
+   "limits": "Single-author report, 2014, abstract; no ischemia reference; abstract gives both 9,200 and 8,300 as the total.",
+   "source": "Stern S, Cardiol J 2014;21(2):198-201",
+   "pmid": "23990189",
+   "doi": "10.5603/CJ.a2013.0118",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=23990189&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K33",
+   "topics": [
+    "rhythm"
+   ],
+   "title": "ST depression during supraventricular tachyarrhythmia does not predict CAD",
+   "statement": "The 2019 ESC chronic coronary syndromes guideline, in its section on resting and ambulatory ECG, states that ST-segment depression recorded during supraventricular tachyarrhythmias does not predict obstructive coronary artery disease.",
+   "quote": "ST-segment depression during supraventricular tachyarrhythmias is not predictive of obstructive CAD.",
+   "direction": "favours_non_ischemic",
+   "applies_when": "ST depression arising during a supraventricular tachyarrhythmia (abrupt-onset regular narrow-QRS tachycardia, or fast atrial fibrillation or flutter).",
+   "limits": "Guideline narrative citing small studies; concerns coronary anatomy, not whether a given episode is ischemic; sinus tachycardia not covered.",
+   "source": "Knuuti J et al. (ESC), Eur Heart J 2020;41(3):407-77",
+   "pmid": "31504439",
+   "doi": "10.1093/eurheartj/ehz425",
+   "url": "https://academic.oup.com/eurheartj/article/41/3/407/5556137",
+   "access": "full_text",
+   "verified": true
+  },
+  {
+   "id": "K34",
+   "topics": [
+    "rhythm",
+    "reasoning_errors"
+   ],
+   "title": "Marked ST depression during SVT without myocardial lactate production",
+   "statement": "In 25 patients with paroxysmal SVT (24 without coronary disease) studied electrophysiologically, heart rate rose from 83 +/- 12 to 180 +/- 25 bpm and all developed 1 to 8 mm ST depression in 1 to 9 of 12 leads, yet myocardial lactate extraction (28 +/- 13% at baseline) did not change significantly. CAD patients paced at 168 +/- 26 bpm switched to net lactate production.",
+   "quote": "All patients had 1 to 8 mm of ST segment depression in 1 to 9 of the 12 leads.",
+   "direction": "favours_non_ischemic",
+   "applies_when": "Deep or downsloping ST depression during a supraventricular tachycardia at very high rate (around 150-200 bpm).",
+   "limits": "25 mostly young patients without CAD, EP laboratory, 1988, abstract truncated; does not show SVT cannot provoke ischemia in CAD.",
+   "source": "Nelson SD et al., J Am Coll Cardiol 1988;12(2):383-7",
+   "pmid": "3392331",
+   "doi": "10.1016/0735-1097(88)90410-x",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=3392331&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K35",
+   "topics": [
+    "rhythm",
+    "reasoning_errors"
+   ],
+   "title": "ST depression during PSVT is common and unrelated to coronary stenosis",
+   "statement": "In 333 consecutive patients with electrophysiologically confirmed PSVT, ST depression appeared during tachycardia in 85% (over six leads in 70% of them); depression over 1 mm occurred in limb leads in 36.0% and precordial leads in 49.8%. Downsloping depression was common in limb leads (40.5%). ST depression tracked tachycardia type, not chest symptoms or coronary stenosis.",
+   "quote": "ST-segment depression was not correlated with symptoms of chest tightness and pain, nor was it correlated with coronary artery stenosis.",
+   "direction": "favours_non_ischemic",
+   "applies_when": "ST depression, including downsloping shape, confined to a run of supraventricular tachycardia.",
+   "limits": "Single centre, 12-lead ECG in the EP laboratory, 2024, abstract; method of coronary assessment not given in the abstract.",
+   "source": "Cao Y et al., J Electrocardiol 2024;84:52-7",
+   "pmid": "38518582",
+   "doi": "10.1016/j.jelectrocard.2024.02.009",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=38518582&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K36",
+   "topics": [
+    "artifact",
+    "measurement"
+   ],
+   "title": "Artifactual ST shift: abrupt J-point step lasting hours, no heart-rate change",
+   "statement": "A methods review of Holter ST analysis in CAD notes that artifactual ST deviation often appears as an abrupt change in J-point level that then stays constant for hours without heart-rate change, whereas genuine episodes are usually accompanied by a primary or secondary heart-rate change; showing heart rate, RR and ectopy beneath the ST trend helps tell them apart.",
+   "quote": "often shows an abrupt change in the J‐point value that persists for hours without any variation and without accompanying heart rate changes",
+   "direction": "favours_non_ischemic",
+   "applies_when": "ST level steps abruptly and then stays flat for hours with no accompanying heart-rate change.",
+   "limits": "Expert review (2005), not a quantitative study; supply ischemia can occur without heart-rate change, so its absence alone is not decisive.",
+   "source": "Stone PH, Ann Noninvasive Electrocardiol 2005;10(2):263-78",
+   "pmid": "15842439",
+   "doi": "10.1111/j.1542-474X.2005.10203.x",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6932340/",
+   "access": "full_text",
+   "verified": true
+  },
+  {
+   "id": "K37",
+   "topics": [
+    "t_wave_qrs"
+   ],
+   "title": "T-wave changes on Holter are not specific for ischemia",
+   "statement": "The ACC/AHA 1999 ambulatory ECG guideline notes that changes in T-wave polarity and morphology are occasionally seen during ambulatory monitoring, but that no data show such changes to be specific markers of myocardial ischemia.",
+   "quote": "there are presently no data to suggest that such changes are specific indicators of myocardial ischemia.",
+   "direction": "caution",
+   "applies_when": "The episode shows T-wave changes (inversion, flattening, peaking) with little or no ST deviation.",
+   "limits": "1999 consensus guideline; does not address pseudo-normalisation of baseline-inverted T waves at rest (see Chierchia 1980).",
+   "source": "Crawford MH et al. (ACC/AHA), J Am Coll Cardiol 1999;34(3):912-48",
+   "pmid": "10483977",
+   "doi": "10.1016/S0735-1097(99)00354-X",
+   "url": "http://web.archive.org/web/20100122081423/http://content.onlinejacc.org:80/cgi/content/full/34/3/912",
+   "access": "full_text",
+   "verified": true
+  },
+  {
+   "id": "K38",
+   "topics": [
+    "t_wave_qrs",
+    "reasoning_errors"
+   ],
+   "title": "Rest-angina ischemia often shows as T-wave pseudo-normalisation, not ST shift",
+   "statement": "In 6 patients with frequent rest angina monitored with ECG, haemodynamics and coronary venous oxygen saturation, 137 ischemic episodes occurred (10 painful): ST elevation in 28, ST depression in 3, and previously inverted or flat T waves becoming upright (pseudo-normalisation) in 106. Oxygen saturation fell without any earlier rise in determinants of myocardial oxygen demand.",
+   "quote": "pseudonormalization of previously inverted or flat T waves in 106 episodes",
+   "direction": "favours_ischemia",
+   "applies_when": "Baseline T wave inverted or flat that becomes upright during the episode without a heart-rate rise; do not read this as heart-rate-related T peaking.",
+   "limits": "6 patients with rest (supply) angina, invasive monitoring, 1980, abstract; not demand ischemia, not Holter.",
+   "source": "Chierchia S et al., Circulation 1980;61(4):759-68",
+   "pmid": "7357718",
+   "doi": "10.1161/01.cir.61.4.759",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=7357718&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K39",
+   "topics": [
+    "eligibility",
+    "conduction"
+   ],
+   "title": "Lead, rhythm and QRS requirements for Holter ischemia interpretation",
+   "statement": "The ACC/AHA 1999 guideline asks for sinus rhythm, baseline ST deviation of 0.1 mV or less, ideally a gently upsloping ST with upright T, and R waves of 10 mm or more; downsloping or scooped baseline ST should be avoided. Patients with LVH, pre-excitation, LBBB or intraventricular conduction delay of 0.10 s or more are unsuitable; ST with RBBB may be interpretable.",
+   "quote": "The baseline ST segment should have ≤0.1 mV deviation, and the morphology ideally should be gently upsloping with an upright T wave.",
+   "direction": "caution",
+   "applies_when": "Lead's baseline beat already has ST shifted over 0.1 mV, downsloping/scooped baseline ST, R wave under 10 mm, non-sinus rhythm, or wide QRS.",
+   "limits": "1999 consensus guideline; criteria for choosing patients and leads before monitoring, not rules for labelling single episodes.",
+   "source": "Crawford MH et al. (ACC/AHA), J Am Coll Cardiol 1999;34(3):912-48",
+   "pmid": "10483977",
+   "doi": "10.1016/S0735-1097(99)00354-X",
+   "url": "http://web.archive.org/web/20100122081423/http://content.onlinejacc.org:80/cgi/content/full/34/3/912",
+   "access": "full_text",
+   "verified": true
+  },
+  {
+   "id": "K40",
+   "topics": [
+    "eligibility"
+   ],
+   "title": "Digoxin produces Holter ST depression in healthy people, even at low rates",
+   "statement": "In 50 healthy volunteers given digoxin 0.25 mg/day for 14 days, ambulatory ECG showed at least one episode of horizontal or downsloping ST depression of 1 mm or more (80 ms after J, lasting 60 s or more) in 13 (26%), and multiple episodes in 5 (10%). This depression also occurred at heart rates below those reached during stress testing.",
+   "quote": "also occurs at heart rates lower than that achieved during stress tests.",
+   "direction": "caution",
+   "applies_when": "Recurrent horizontal or downsloping (possibly scooped) ST depression at modest heart rates when medication is unknown.",
+   "limits": "Healthy volunteers, 1991, abstract; drug history is invisible to the reviewer, so this lowers confidence rather than deciding a case.",
+   "source": "Mooss AN et al., Am J Cardiol 1991;68(15):1503-6",
+   "pmid": "1746434",
+   "doi": "10.1016/0002-9149(91)90286-t",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=1746434&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K41",
+   "topics": [
+    "eligibility"
+   ],
+   "title": "LVH: Holter ST depression and perfusion defects common without epicardial CAD",
+   "statement": "In 90 patients with hypertensive LVH, 43 had at least one ST-depression episode on 48-hour ambulatory monitoring (median 16 episodes, over 90% silent) and 48 had reversible thallium defects, yet only 18 of 35 who had angiography had important coronary disease. The authors conclude that ischemia is common in hypertensive LVH even without epicardial CAD.",
+   "quote": "Symptomatic and silent myocardial ischaemia are common in hypertensive patients with left ventricular hypertrophy, even in the absence of epicardial coronary artery disease.",
+   "direction": "caution",
+   "applies_when": "Tall QRS voltages or baseline repolarization abnormality suggesting LVH, with recurrent ST-depression episodes in the record.",
+   "limits": "90 patients, 1992, abstract; ischemia inferred from ST and thallium; LVH cannot be diagnosed reliably from 2-3 Holter leads.",
+   "source": "Pringle SD et al., Br Heart J 1992;67(5):377-82",
+   "pmid": "1389717",
+   "doi": "10.1136/hrt.67.5.377",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=1389717&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K42",
+   "topics": [
+    "temporal_context"
+   ],
+   "title": "Onset heart rate is the most reproducible feature of a patient's episodes",
+   "statement": "In 20 patients with stable angina and frequent ischemia on 72 hours of Holter monitoring (389 episodes), day-to-day variability within patients was 36% for episode number, 51% for duration and 31% for maximal ST depression, but only 9% for heart rate at onset of ST depression (between-patient range 75-105 bpm, mean 91).",
+   "quote": "Only 9% variability was noted in heart rate at the beginning of ST depression.",
+   "direction": "both_or_neither",
+   "applies_when": "Comparing the candidate's onset heart rate with the patient's other ischemic-looking episodes, or judging a candidate by the record's episode count.",
+   "limits": "20 selected patients with at least 2 episodes a day, 1987, abstract; day-to-day not within-day variability; similarity is supportive, not diagnostic.",
+   "source": "Tzivoni D et al., Am J Cardiol 1987;60(13):1003-5",
+   "pmid": "3673901",
+   "doi": "10.1016/0002-9149(87)90341-9",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=3673901&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K43",
+   "topics": [
+    "temporal_context",
+    "reasoning_errors"
+   ],
+   "title": "Different episodes in one patient can have different mechanisms",
+   "statement": "A review of circadian variation in ischemic burden and threshold states that daily-life ischemia comes from a mix of raised oxygen demand and changes in coronary tone, that the mix differs between patients, and that in one person separate episodes may arise from different mechanisms.",
+   "quote": "Moreover, in the same individual, various episodes may be due to different mechanisms.",
+   "direction": "caution",
+   "applies_when": "Reviewer is tempted to label a candidate by analogy with the patient's other episodes (for example, 'this patient's changes are heart-rate related').",
+   "limits": "Narrative review (1996), short abstract; no quantitative data.",
+   "source": "Tzivoni D, Eur Heart J 1996;17 Suppl G:59-63",
+   "pmid": "8960458",
+   "doi": "10.1093/eurheartj/17.suppl_g.59",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=8960458&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K44",
+   "topics": [
+    "reasoning_errors"
+   ],
+   "title": "Surface ST depression does not localise the ischemic region",
+   "statement": "In a sheep model of subendocardial ischemia (36 animals) with epicardial and endocardial mapping plus a bidomain computer model, LAD and circumflex ischemia gave very similar epicardial ST-depression patterns on the left-ventricular free wall, unrelated to the ischemic region; depression arose at the lateral boundary of the ischemic zone. The authors conclude body-surface ST depression does not localise ischemia.",
+   "quote": "These effects explain why body surface ST depression does not localize cardiac ischemia in humans.",
+   "direction": "caution",
+   "applies_when": "ST depression appears in a lead the reviewer would not expect to face the ischemic territory, or in a different lead from the patient's other episodes.",
+   "limits": "Animal and computer model, 1998, abstract; applies to ST depression, not ST elevation.",
+   "source": "Li D et al., Circ Res 1998;82(9):957-70",
+   "pmid": "9598593",
+   "doi": "10.1161/01.res.82.9.957",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9598593&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  },
+  {
+   "id": "K45",
+   "topics": [
+    "reasoning_errors"
+   ],
+   "title": "Seeing an incorrect prior diagnosis sharply lowers interpreter accuracy",
+   "statement": "In 9000 12-lead ECG interpretations by cardiology and non-cardiology fellows, accuracy fell by 43.20% and 58.95% respectively when an incorrect automated diagnosis was displayed, and interpreters' confidence became a weaker predictor of accuracy, indicating automation bias.",
+   "quote": "Interpretation accuracies achieved by CFs and non-CFs dropped by 43.20% and 58.95% respectively when an incorrect AD was presented",
+   "direction": "caution",
+   "applies_when": "Review step that sees a prior label, a first reader's conclusion or a detector flag before forming its own judgement.",
+   "limits": "Resting 12-lead ECG read by trainees, 2018, abstract; not Holter ST episodes; size of the effect for LLM reviewers unknown.",
+   "source": "Bond RR et al., J Electrocardiol 2018;51(6S):S6-S11",
+   "pmid": "30122457",
+   "doi": "10.1016/j.jelectrocard.2018.08.007",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=30122457&rettype=abstract&retmode=text",
+   "access": "abstract",
+   "verified": true
+  }
+ ],
+ "auto_priority": {
+  "_note": "cards shown first for each topic in automatic retrieval (chosen 2026-10-14 by the main agent for how directly they bear on telling ischemic from non-ischemic episodes; other cards follow in file order)",
+  "heart_rate": [
+   "K01",
+   "K02",
+   "K04"
+  ],
+  "reasoning_errors": [
+   "K45",
+   "K07",
+   "K08"
+  ],
+  "position_axis": [
+   "K14",
+   "K16"
+  ],
+  "measurement": [
+   "K21",
+   "K22"
+  ],
+  "st_shape": [
+   "K26",
+   "K25"
+  ],
+  "st_elevation": [
+   "K28",
+   "K32"
+  ],
+  "rhythm": [
+   "K33",
+   "K34"
+  ],
+  "artifact": [
+   "K36",
+   "K27"
+  ],
+  "t_wave_qrs": [
+   "K18",
+   "K37"
+  ],
+  "conduction": [
+   "K20",
+   "K19"
+  ],
+  "eligibility": [
+   "K39",
+   "K40"
+  ],
+  "temporal_context": [
+   "K42",
+   "K43"
+  ]
+ }
+}

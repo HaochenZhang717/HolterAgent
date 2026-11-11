@@ -1,0 +1,39 @@
+{
+  "id": "v08p",
+  "parent": "v08",
+  "summary": "v08 as a single decision with a stated probability, for pool models without log-probabilities: the judgement session only (no verification); the case score is the submitted p_ischemic.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {}
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

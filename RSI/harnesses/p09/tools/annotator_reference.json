@@ -1,0 +1,13 @@
+{
+  "name": "annotator_reference",
+  "description": "The candidate re-judged against a time-varying ST reference built like that of Smrdel & Jager (2002), who approximated the Long-Term ST Database annotators' reference (which followed slow drifts, axis shifts and conduction changes): for each involved lead, the peak deviation against the record-wide median and after each of the three steps (slow trend, steps, lead orientation), whether the LTSTDB episode rule still finds an episode at 100 uV and at 150 uV, which step dropped it below 100 uV, the lead's orientation and the reference slope. A measurement packet, not a diagnosis.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "record_id": {"type": "string"},
+      "candidate_id": {"type": "string"}
+    },
+    "required": ["record_id", "candidate_id"],
+    "additionalProperties": false
+  }
+}

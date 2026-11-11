@@ -1,0 +1,39 @@
+{
+  "id": "a05",
+  "parent": "v08p",
+  "summary": "Aspect C (reasoning procedure): v08p with judgement.md rewritten as a fixed seven-item checklist (A real local change, B time course, C shape, D ST at matched heart rate, E position, F conduction, G noise), each given a FOR/AGAINST/NEUTRAL verdict, a list of non-evidence (signal quality, lead count, recurrence, K43) kept out of the findings, and probability bands set from the verdicts.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {}
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

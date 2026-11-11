@@ -1,0 +1,20 @@
+{
+  "name": "delineation_check",
+  "description": "A second, independent delineation of the candidate's beats (NeuroKit2) to check our own J point and ST level. Per involved lead, in the dossier's reference window and at the peak: NeuroKit2's QRS onset, J and T end relative to R, QRS width and the ST level at J+0/60/80 ms against the PR level, next to our pipeline's J point, QRS width and ST level at the same time, with the J difference (NeuroKit2's J is earlier in general); and the ST change from reference to peak by both methods, with flags when our J point moved relative to NeuroKit2's by more than 20 ms between reference and peak or the two ST changes differ by more than 100 uV (engineering defaults). When both methods give a similar change, it does not depend on where our pipeline put the J point. A measurement packet, not a diagnosis.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "record_id": {
+        "type": "string"
+      },
+      "candidate_id": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "record_id",
+      "candidate_id"
+    ],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "direct",
+  "parent": "h00",
+  "summary": "Baseline, not part of the search: h00's prompts, labels and submission format in one session without analysis tools; the fixed check set (dossier 'standard') and the raw strip at the extremum are given up front.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard"
+    ],
+    "verify": "none"
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [],
+    "descriptions": {}
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

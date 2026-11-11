@@ -1,0 +1,13 @@
+{
+  "name": "hr_rise_ledger",
+  "description": "This candidate against the patient's own heart-rate rises: the heart-rate baseline and rise before the ST extremum, minutes at baseline + 10 bpm, heart-rate load of the previous hour, time from the heart-rate maximum to the ST extremum, seconds with heart rate back at baseline while ST is still at half the extremum or more; and every other heart-rate rise in the record that starts and peaks at heart rates comparable to this candidate's, with the ST change it produced in the same lead (summary and the largest ones). A measurement packet, not a diagnosis. The same packet is supplied in the initial dossier.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "record_id": {"type": "string"},
+      "candidate_id": {"type": "string"}
+    },
+    "required": ["record_id", "candidate_id"],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "xac03",
+  "parent": "xac02",
+  "summary": "Aspect C (reasoning procedure): xac02 with judgement.md replaced by an anchor-and-adjust procedure that starts p_ischemic from the size of the change in literature bands (100/150/200 uV, ACC/AHA, K17, K26), adjusts it with bounded two-way card-cited items (timing K01/K02, steady rate K29/K08, shape K24-K26, synchronous QRS/ST steps K14/K27/K36, slow-rate elevation K32, rise size K04), and counts as non-evidence the rate_response 'beyond usual' finding that nearly every candidate shows, with the matching heart-rate line of the usage guidance.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {}
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

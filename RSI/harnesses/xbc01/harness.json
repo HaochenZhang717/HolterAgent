@@ -1,0 +1,42 @@
+{
+  "id": "xbc01",
+  "parent": "v08p",
+  "summary": "Aspect B: v08p plus the library tool annotator_reference in the dossier (the candidate re-judged against a Smrdel & Jager style time-varying reference that follows slow drifts, QRS/ST steps and lead orientation, like the database annotators' reference), with a two-sided description of how to read it.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response",
+      "annotator_reference"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {
+      "annotator_reference": "Already in the dossier for this candidate. The candidate re-judged against a time-varying ST reference built like that of Smrdel & Jager (2002), who approximated the Long-Term ST Database annotators' reference (the annotators placed their reference in non-ischemic stretches, so it followed slow drifts, axis shifts and conduction changes): for each involved lead, the peak deviation against the record-wide median and after each of the three steps (slow_trend: 30-min trend; step: following the ST level through stretches with a QRS-shape or ST step; orientation: absorbing deviations against the lead's usual direction), whether the database's episode rule still finds an episode at 100 uV and at 150 uV, which step dropped it below 100 uV, the lead's orientation and the reference slope. How to read it, in both directions: still an episode at 100 and 150 uV in the peak lead = the change stands out even against a reference that follows drifts, steps and the lead's usual level, which counts against slow drift, reference effect and a position/axis step as the cause (it does not separate ischemic from heart-rate related change); an episode at 100 but not at 150 uV is the uncertain zone; dropped below 100 uV by 'step' = the deviation coincides with a QRS-shape or ST step the reference follows, which fits an axis/position or conduction shift; by 'slow_trend' = the deviation is mostly a slow drift of the lead's level; by 'orientation' = a deviation against the lead's usual direction. Caveat: a candidate lasting tens of minutes pulls the 30-min trend along and can be absorbed even when it is a real episode; for long candidates read it with episode_context and the trend image. A measurement packet, not a diagnosis."
+    }
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

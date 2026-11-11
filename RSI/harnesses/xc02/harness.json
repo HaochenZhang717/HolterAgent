@@ -1,0 +1,39 @@
+{
+  "id": "xc02",
+  "parent": "v08p",
+  "summary": "Aspect C: the judgement becomes a signature-based differential in which ischemia (shape, time course, heart-rate relation, depth) and each alternative (heart-rate related only with an actual heart-rate change, early repolarization, position, conduction, noise, reference) count only through their own positive signature elements, generic and record-constant facts are excluded, and a fixed ischemia-count by alternative-strength table sets p_ischemic.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {}
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

@@ -1,0 +1,1388 @@
+{
+ "note": "aspect ablation selection split (2026-11-06): the 104 development candidates of validation_v4, i.e. validation_v4 without the 165 ltstdb_unused test candidates; the same set reselect_devonly.py used for the p56a pick",
+ "cases": [
+  {
+   "record": "s20061",
+   "candidate_id": "s20061-B-004030",
+   "start_s": 2430.0,
+   "end_s": 2880.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 124.96978330612183,
+   "leads": [
+    "ML2",
+    "MV2"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20061",
+   "candidate_id": "s20061-B-035330",
+   "start_s": 14010.0,
+   "end_s": 14385.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 188.69158506393433,
+   "leads": [
+    "ML2",
+    "MV2"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20061",
+   "candidate_id": "s20061-B-040030",
+   "start_s": 14430.0,
+   "end_s": 14625.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 147.43441343307495,
+   "leads": [
+    "ML2",
+    "MV2"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20061",
+   "candidate_id": "s20061-B-181030",
+   "start_s": 65430.0,
+   "end_s": 66165.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 171.32740354537964,
+   "leads": [
+    "ML2",
+    "MV2"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20061",
+   "candidate_id": "s20061-B-221530",
+   "start_s": 80130.0,
+   "end_s": 80715.0,
+   "reference": "other",
+   "peak_uv": 111.66885709762573,
+   "leads": [
+    "ML2",
+    "MV2"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20121",
+   "candidate_id": "s20121-B-075900",
+   "start_s": 28740.0,
+   "end_s": 29310.0,
+   "reference": "other",
+   "peak_uv": 106.90350341796875,
+   "leads": [
+    "ML2",
+    "MV2"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20121",
+   "candidate_id": "s20121-B-133215",
+   "start_s": 48735.0,
+   "end_s": 49020.0,
+   "reference": "ischemic",
+   "peak_uv": 141.4681396484375,
+   "leads": [
+    "ML2",
+    "MV2"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20171",
+   "candidate_id": "s20171-B-012200",
+   "start_s": 4920.0,
+   "end_s": 5025.0,
+   "reference": "ischemic",
+   "peak_uv": 126.94222927093506,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20171",
+   "candidate_id": "s20171-B-045415",
+   "start_s": 17655.0,
+   "end_s": 17745.0,
+   "reference": "ischemic",
+   "peak_uv": 154.99369049072266,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20171",
+   "candidate_id": "s20171-B-064100",
+   "start_s": 24060.0,
+   "end_s": 24150.0,
+   "reference": "ischemic",
+   "peak_uv": 179.62682342529297,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20171",
+   "candidate_id": "s20171-B-074630",
+   "start_s": 27990.0,
+   "end_s": 28065.0,
+   "reference": "ischemic",
+   "peak_uv": 150.91153717041016,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20171",
+   "candidate_id": "s20171-B-080800",
+   "start_s": 29280.0,
+   "end_s": 29370.0,
+   "reference": "ischemic",
+   "peak_uv": 193.56291961669922,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20171",
+   "candidate_id": "s20171-B-085530",
+   "start_s": 32130.0,
+   "end_s": 32910.0,
+   "reference": "other",
+   "peak_uv": 227.71990203857422,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20171",
+   "candidate_id": "s20171-B-091400",
+   "start_s": 33240.0,
+   "end_s": 33300.0,
+   "reference": "ischemic",
+   "peak_uv": 125.08741760253906,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20171",
+   "candidate_id": "s20171-B-093445",
+   "start_s": 34485.0,
+   "end_s": 34605.0,
+   "reference": "ischemic",
+   "peak_uv": 183.2477798461914,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20171",
+   "candidate_id": "s20171-B-093700",
+   "start_s": 34620.0,
+   "end_s": 35010.0,
+   "reference": "ischemic",
+   "peak_uv": 140.7009506225586,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20171",
+   "candidate_id": "s20171-B-122045",
+   "start_s": 44445.0,
+   "end_s": 44595.0,
+   "reference": "ischemic",
+   "peak_uv": 238.59004974365234,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20171",
+   "candidate_id": "s20171-B-140900",
+   "start_s": 50940.0,
+   "end_s": 51090.0,
+   "reference": "ischemic",
+   "peak_uv": 287.24222564697266,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20171",
+   "candidate_id": "s20171-B-231115",
+   "start_s": 83475.0,
+   "end_s": 84090.0,
+   "reference": "axis_or_conduction",
+   "peak_uv": 115.78337860107422,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20241",
+   "candidate_id": "s20241-B-092630",
+   "start_s": 33990.0,
+   "end_s": 35745.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 219.5455551147461,
+   "leads": [
+    "ML2",
+    "MV2"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20241",
+   "candidate_id": "s20241-B-215245",
+   "start_s": 78765.0,
+   "end_s": 81150.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 256.16394805908203,
+   "leads": [
+    "ML2",
+    "MV2"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20241",
+   "candidate_id": "s20241-B-231900",
+   "start_s": 83940.0,
+   "end_s": 84120.0,
+   "reference": "other",
+   "peak_uv": 110.1169204711914,
+   "leads": [
+    "ML2",
+    "MV2"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-000000",
+   "start_s": 0.0,
+   "end_s": 435.0,
+   "reference": "ischemic",
+   "peak_uv": 276.74025535583496,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-022000",
+   "start_s": 8400.0,
+   "end_s": 8700.0,
+   "reference": "other",
+   "peak_uv": 126.64079093933105,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-022900",
+   "start_s": 8940.0,
+   "end_s": 10155.0,
+   "reference": "ischemic",
+   "peak_uv": 210.50588035583496,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-053615",
+   "start_s": 20175.0,
+   "end_s": 20430.0,
+   "reference": "ischemic",
+   "peak_uv": 226.63954734802246,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-080345",
+   "start_s": 29025.0,
+   "end_s": 29505.0,
+   "reference": "ischemic",
+   "peak_uv": 161.72728538513184,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-082400",
+   "start_s": 30240.0,
+   "end_s": 30735.0,
+   "reference": "ischemic",
+   "peak_uv": 227.5502529144287,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-091815",
+   "start_s": 33495.0,
+   "end_s": 33735.0,
+   "reference": "ischemic",
+   "peak_uv": 273.2633876800537,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-121200",
+   "start_s": 43920.0,
+   "end_s": 44310.0,
+   "reference": "other",
+   "peak_uv": 118.94388771057129,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-122000",
+   "start_s": 44400.0,
+   "end_s": 44850.0,
+   "reference": "other",
+   "peak_uv": 110.22709083557129,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-170645",
+   "start_s": 61605.0,
+   "end_s": 61860.0,
+   "reference": "other",
+   "peak_uv": 120.35068702697754,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-184415",
+   "start_s": 67455.0,
+   "end_s": 67635.0,
+   "reference": "ischemic",
+   "peak_uv": 184.97992515563965,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-210330",
+   "start_s": 75810.0,
+   "end_s": 76590.0,
+   "reference": "axis_or_conduction",
+   "peak_uv": 142.48858070373535,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-211745",
+   "start_s": 76665.0,
+   "end_s": 76995.0,
+   "reference": "ischemic",
+   "peak_uv": 221.2151393890381,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-220215",
+   "start_s": 79335.0,
+   "end_s": 79590.0,
+   "reference": "ischemic",
+   "peak_uv": 203.0095729827881,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20301",
+   "candidate_id": "s20301-B-233100",
+   "start_s": 84660.0,
+   "end_s": 84900.0,
+   "reference": "ischemic",
+   "peak_uv": 243.60263633728027,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-004430",
+   "start_s": 2670.0,
+   "end_s": 2925.0,
+   "reference": "other",
+   "peak_uv": 134.10052490234375,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-013015",
+   "start_s": 5415.0,
+   "end_s": 5535.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 188.23373413085938,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-031415",
+   "start_s": 11655.0,
+   "end_s": 12000.0,
+   "reference": "axis_or_conduction",
+   "peak_uv": 113.71200561523438,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-032315",
+   "start_s": 12195.0,
+   "end_s": 12270.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 141.19479370117188,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-032515",
+   "start_s": 12315.0,
+   "end_s": 12930.0,
+   "reference": "other",
+   "peak_uv": 134.4527130126953,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-033615",
+   "start_s": 12975.0,
+   "end_s": 13155.0,
+   "reference": "axis_or_conduction",
+   "peak_uv": 131.8671112060547,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-050445",
+   "start_s": 18285.0,
+   "end_s": 19260.0,
+   "reference": "other",
+   "peak_uv": 114.50311279296875,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-062000",
+   "start_s": 22800.0,
+   "end_s": 23010.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 145.12457275390625,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-065745",
+   "start_s": 25065.0,
+   "end_s": 26355.0,
+   "reference": "other",
+   "peak_uv": 127.94642639160156,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-084000",
+   "start_s": 31200.0,
+   "end_s": 31665.0,
+   "reference": "axis_or_conduction",
+   "peak_uv": 140.41024780273438,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-135100",
+   "start_s": 49860.0,
+   "end_s": 50310.0,
+   "reference": "ischemic",
+   "peak_uv": 299.51720809936523,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-151030",
+   "start_s": 54630.0,
+   "end_s": 54765.0,
+   "reference": "axis_or_conduction",
+   "peak_uv": 158.24179077148438,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-154330",
+   "start_s": 56610.0,
+   "end_s": 57540.0,
+   "reference": "other",
+   "peak_uv": 130.8963623046875,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-160100",
+   "start_s": 57660.0,
+   "end_s": 58020.0,
+   "reference": "ischemic",
+   "peak_uv": 123.27012252807617,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-165400",
+   "start_s": 60840.0,
+   "end_s": 61215.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 205.64352416992188,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-170700",
+   "start_s": 61620.0,
+   "end_s": 61815.0,
+   "reference": "ischemic",
+   "peak_uv": 366.0670738220215,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-171630",
+   "start_s": 62190.0,
+   "end_s": 62700.0,
+   "reference": "axis_or_conduction",
+   "peak_uv": 163.56668090820312,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-172530",
+   "start_s": 62730.0,
+   "end_s": 62760.0,
+   "reference": "axis_or_conduction",
+   "peak_uv": 158.07333374023438,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-173830",
+   "start_s": 63510.0,
+   "end_s": 63645.0,
+   "reference": "other",
+   "peak_uv": 127.82479858398438,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-175515",
+   "start_s": 64515.0,
+   "end_s": 64635.0,
+   "reference": "other",
+   "peak_uv": 110.10418701171875,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-183400",
+   "start_s": 66840.0,
+   "end_s": 67200.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 144.38772583007812,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-184045",
+   "start_s": 67245.0,
+   "end_s": 67425.0,
+   "reference": "other",
+   "peak_uv": 119.47064208984375,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-184430",
+   "start_s": 67470.0,
+   "end_s": 67695.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 198.39138793945312,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-193700",
+   "start_s": 70620.0,
+   "end_s": 71550.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 365.3253479003906,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-200700",
+   "start_s": 72420.0,
+   "end_s": 72480.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 165.4012107849121,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-204015",
+   "start_s": 74415.0,
+   "end_s": 74625.0,
+   "reference": "axis_or_conduction",
+   "peak_uv": 166.49508666992188,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-205200",
+   "start_s": 75120.0,
+   "end_s": 77790.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 294.2134094238281,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-215000",
+   "start_s": 78600.0,
+   "end_s": 78840.0,
+   "reference": "other",
+   "peak_uv": 152.20391845703125,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-222415",
+   "start_s": 80655.0,
+   "end_s": 81135.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 299.7923889160156,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20311",
+   "candidate_id": "s20311-B-233645",
+   "start_s": 85005.0,
+   "end_s": 85650.0,
+   "reference": "other",
+   "peak_uv": 170.60025024414062,
+   "leads": [
+    "MLIII",
+    "V3"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20321",
+   "candidate_id": "s20321-B-163000",
+   "start_s": 59400.0,
+   "end_s": 59505.0,
+   "reference": "ischemic",
+   "peak_uv": 123.32887077331543,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20321",
+   "candidate_id": "s20321-B-164530",
+   "start_s": 60330.0,
+   "end_s": 60465.0,
+   "reference": "ischemic",
+   "peak_uv": 160.49433708190918,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20561",
+   "candidate_id": "s20561-B-060445",
+   "start_s": 21885.0,
+   "end_s": 22770.0,
+   "reference": "ischemic",
+   "peak_uv": 196.1748046875,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20561",
+   "candidate_id": "s20561-B-191830",
+   "start_s": 69510.0,
+   "end_s": 72705.0,
+   "reference": "ischemic",
+   "peak_uv": 285.1439666748047,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20561",
+   "candidate_id": "s20561-B-225115",
+   "start_s": 82275.0,
+   "end_s": 83070.0,
+   "reference": "noise_or_unreadable",
+   "peak_uv": 127.65523529052734,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s20641",
+   "candidate_id": "s20641-B-114215",
+   "start_s": 42135.0,
+   "end_s": 42750.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 167.09268188476562,
+   "leads": [
+    "V4",
+    "MLIII"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30661",
+   "candidate_id": "s30661-B-004545",
+   "start_s": 2745.0,
+   "end_s": 2940.0,
+   "reference": "other",
+   "peak_uv": 187.27313232421875,
+   "leads": [
+    "V4",
+    "V3",
+    "II"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30661",
+   "candidate_id": "s30661-B-035230",
+   "start_s": 13950.0,
+   "end_s": 19245.0,
+   "reference": "ischemic",
+   "peak_uv": 405.529296875,
+   "leads": [
+    "V4",
+    "V3",
+    "II"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30661",
+   "candidate_id": "s30661-B-053445",
+   "start_s": 20085.0,
+   "end_s": 20145.0,
+   "reference": "other",
+   "peak_uv": 113.3392333984375,
+   "leads": [
+    "V4",
+    "V3",
+    "II"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30661",
+   "candidate_id": "s30661-B-070845",
+   "start_s": 25725.0,
+   "end_s": 25890.0,
+   "reference": "other",
+   "peak_uv": 126.99639892578125,
+   "leads": [
+    "V4",
+    "V3",
+    "II"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30661",
+   "candidate_id": "s30661-B-072015",
+   "start_s": 26415.0,
+   "end_s": 26505.0,
+   "reference": "other",
+   "peak_uv": 147.31398010253906,
+   "leads": [
+    "V4",
+    "V3",
+    "II"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30661",
+   "candidate_id": "s30661-B-073430",
+   "start_s": 27270.0,
+   "end_s": 27405.0,
+   "reference": "other",
+   "peak_uv": 115.24404907226562,
+   "leads": [
+    "V4",
+    "V3",
+    "II"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30661",
+   "candidate_id": "s30661-B-144215",
+   "start_s": 52935.0,
+   "end_s": 56640.0,
+   "reference": "other",
+   "peak_uv": 109.90017318725586,
+   "leads": [
+    "V4",
+    "V3",
+    "II"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30661",
+   "candidate_id": "s30661-B-212400",
+   "start_s": 77040.0,
+   "end_s": 77370.0,
+   "reference": "other",
+   "peak_uv": 128.93145751953125,
+   "leads": [
+    "V4",
+    "V3",
+    "II"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30661",
+   "candidate_id": "s30661-B-213245",
+   "start_s": 77565.0,
+   "end_s": 77895.0,
+   "reference": "other",
+   "peak_uv": 158.56925547122955,
+   "leads": [
+    "V4",
+    "V3",
+    "II"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30661",
+   "candidate_id": "s30661-B-214100",
+   "start_s": 78060.0,
+   "end_s": 78285.0,
+   "reference": "other",
+   "peak_uv": 156.91927683353424,
+   "leads": [
+    "V4",
+    "V3",
+    "II"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30661",
+   "candidate_id": "s30661-B-215145",
+   "start_s": 78705.0,
+   "end_s": 78750.0,
+   "reference": "other",
+   "peak_uv": 137.68544006347656,
+   "leads": [
+    "V4",
+    "V3",
+    "II"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30691",
+   "candidate_id": "s30691-B-004230",
+   "start_s": 2550.0,
+   "end_s": 3180.0,
+   "reference": "other",
+   "peak_uv": 122.37829542160034,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30691",
+   "candidate_id": "s30691-B-031145",
+   "start_s": 11505.0,
+   "end_s": 18405.0,
+   "reference": "ischemic",
+   "peak_uv": 268.817542552948,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30691",
+   "candidate_id": "s30691-B-052000",
+   "start_s": 19200.0,
+   "end_s": 20250.0,
+   "reference": "ischemic",
+   "peak_uv": 185.5319743156433,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30691",
+   "candidate_id": "s30691-B-062700",
+   "start_s": 23220.0,
+   "end_s": 23265.0,
+   "reference": "other",
+   "peak_uv": 128.72114515304565,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30691",
+   "candidate_id": "s30691-B-081845",
+   "start_s": 29925.0,
+   "end_s": 32430.0,
+   "reference": "ischemic",
+   "peak_uv": 173.00852155685425,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30691",
+   "candidate_id": "s30691-B-090300",
+   "start_s": 32580.0,
+   "end_s": 32820.0,
+   "reference": "ischemic",
+   "peak_uv": 144.603919506073,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30691",
+   "candidate_id": "s30691-B-205300",
+   "start_s": 75180.0,
+   "end_s": 78645.0,
+   "reference": "ischemic",
+   "peak_uv": 185.53420209884644,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30711",
+   "candidate_id": "s30711-B-035215",
+   "start_s": 13935.0,
+   "end_s": 14250.0,
+   "reference": "ischemic",
+   "peak_uv": 143.70031797885895,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30711",
+   "candidate_id": "s30711-B-041730",
+   "start_s": 15450.0,
+   "end_s": 15690.0,
+   "reference": "ischemic",
+   "peak_uv": 157.31869566440582,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30711",
+   "candidate_id": "s30711-B-050500",
+   "start_s": 18300.0,
+   "end_s": 18645.0,
+   "reference": "ischemic",
+   "peak_uv": 111.47614347934723,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30711",
+   "candidate_id": "s30711-B-052700",
+   "start_s": 19620.0,
+   "end_s": 20175.0,
+   "reference": "ischemic",
+   "peak_uv": 132.7512823343277,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30711",
+   "candidate_id": "s30711-B-062745",
+   "start_s": 23265.0,
+   "end_s": 23580.0,
+   "reference": "ischemic",
+   "peak_uv": 123.4695211648941,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30711",
+   "candidate_id": "s30711-B-064300",
+   "start_s": 24180.0,
+   "end_s": 24645.0,
+   "reference": "ischemic",
+   "peak_uv": 129.14363157749176,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30711",
+   "candidate_id": "s30711-B-082745",
+   "start_s": 30465.0,
+   "end_s": 31335.0,
+   "reference": "ischemic",
+   "peak_uv": 182.29885923862457,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30711",
+   "candidate_id": "s30711-B-084300",
+   "start_s": 31380.0,
+   "end_s": 31620.0,
+   "reference": "ischemic",
+   "peak_uv": 222.0286260843277,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30711",
+   "candidate_id": "s30711-B-110400",
+   "start_s": 39840.0,
+   "end_s": 40845.0,
+   "reference": "ischemic",
+   "peak_uv": 206.09932005405426,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30711",
+   "candidate_id": "s30711-B-181530",
+   "start_s": 65730.0,
+   "end_s": 65880.0,
+   "reference": "ischemic",
+   "peak_uv": 137.65597593784332,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30721",
+   "candidate_id": "s30721-B-021400",
+   "start_s": 8040.0,
+   "end_s": 9735.0,
+   "reference": "heart_rate_related",
+   "peak_uv": 162.6170196533203,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30721",
+   "candidate_id": "s30721-B-064230",
+   "start_s": 24150.0,
+   "end_s": 24540.0,
+   "reference": "axis_or_conduction",
+   "peak_uv": 126.54306763410568,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  },
+  {
+   "record": "s30751",
+   "candidate_id": "s30751-B-195745",
+   "start_s": 71865.0,
+   "end_s": 72345.0,
+   "reference": "ischemic",
+   "peak_uv": 231.0145721435547,
+   "leads": [
+    "E-S",
+    "A-S",
+    "A-I"
+   ],
+   "duplicate_lead_names": false
+  }
+ ]
+}

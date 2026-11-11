@@ -1,0 +1,42 @@
+{
+  "id": "xab03",
+  "parent": "xab02",
+  "summary": "Aspect B (tools and evidence): xab02 with the annotator_reference library tool added to the first-message dossier, a description that says how to read it for and against a distinct episode (main lead first), and a matching How-to-use line, so every case shows whether the candidate is still an episode against an approximation of the annotators' time-varying ST reference.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response",
+      "annotator_reference"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {
+      "annotator_reference": "Supplied in the initial dossier. The candidate re-judged against a time-varying ST reference built like that of Smrdel & Jager (2002), who approximated the Long-Term ST Database annotators' reference (which followed slow drifts, axis shifts and conduction changes). Per involved lead: the peak deviation (signed towards the candidate, positive = same direction) against the record-wide median and after each of three steps (slow_trend: the 30-min moving mean of ST, replaced by the 4-h moving mean where the two differ by more than 50 uV; steps: where they differ and the stretch contains an ST step of the lead or a QRS-shape step, the reference follows the ST level; orientation: deviations opposite to the lead's usual direction of deviation, or small ones in a lead without a usual direction, are absorbed); whether the LTSTDB episode rule still finds an episode at 100 uV (episode_at_100_uv) and at 150 uV (episode_at_150_uv) against the final reference; which step first dropped the peak below 100 uV; the lead's orientation (E, D or U) and the reference slope during the candidate. How to read it, in both directions: an episode at 150 uV in the candidate's main lead means the change stands out from the lead's slowly moving level even after drifts and steps are followed, so it is a distinct episode and not a reference effect or slow drift (it does not by itself tell ischemic from heart-rate related or position change; judge that with the other evidence). No episode at 100 uV means the change largely disappears against this reference; the step that removed it names the competing explanation: slow_trend = a slow drift of the lead's level, step = a change at an ST or QRS-shape step (check morphology_steps and compare_morphology for an axis or conduction change), orientation = a deviation against the lead's usual direction. An episode at 100 but not at 150 uV is the uncertain zone (Smrdel & Jager needed 150 uV with their automatic reference to match the annotations). When the leads disagree, read first the lead with the largest peak against the record median; a lost episode in a smaller secondary lead says only that this lead's part is not distinct. Limits: when the peak against the record median is itself barely above 100 uV, a small difference of reference decides whether the episode survives, so its loss says little; the 30-min trend can absorb part of a long real episode (tens of minutes), so for a long, smooth candidate check the trend image before reading slow_trend absorption as drift; the reference is an approximation, so weigh it with the other evidence rather than as a verdict. A measurement packet, not a diagnosis."
+    }
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

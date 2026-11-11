@@ -1,0 +1,43 @@
+{
+  "id": "xb03",
+  "parent": "xb02",
+  "summary": "Aspect B (tools and evidence): xb02 plus the library tool annotator_reference in the dossier (annotator-like time-varying reference, Smrdel & Jager 2002, K22), so the QRS-coupling evidence that rescued position-like ischemic episodes is weighed together with whether the candidate is still an episode against a reference that follows drift, steps and lead orientation, read in both directions.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response",
+      "annotator_reference",
+      "qrs_st_coupling"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {
+      "annotator_reference": "The candidate re-judged against a time-varying ST reference built like that of Smrdel & Jager (CinC 2002), who approximated the Long-Term ST Database annotators' time-varying ST reference function (K22). Three steps per involved lead: slow trend (30-min against 4-h moving mean), steps (the reference follows the ST level across ST or QRS-shape steps), lead orientation (deviations opposite to the lead's usual direction are absorbed). Per lead: peak deviation towards the candidate against the record-wide median and after each step, whether the LTSTDB episode rule still finds an episode at 100 uV and at 150 uV, which step first dropped the peak below 100 uV, the lead's orientation and the reference slope. Supplied in the dossier. How to read it (evidence, not a verdict): an episode that persists at 150 uV with first_step_dropping_it_below_100_uv 'none' is a change that stands out from the lead's local level, drift and steps - a genuine transient ST episode, which argues against slow drift, a reference effect or a position step as the whole explanation (it does not separate ischemia from a heart-rate related change; use rate_response and shape for that). No episode at 100 uV means the change disappears against the annotator-like reference: dropped by 'slow_trend' fits slow drift or a lead level far from the record median; by 'step' fits a position/axis or conduction step (check the QRS change in qrs_st_coupling, compare_morphology and morphology_steps); by 'orientation' means the deviation is opposite to the lead's usual direction. Episode at 100 but not at 150 uV is the uncertain zone (Smrdel & Jager needed 150 uV with their automatic reference to match the protocol B annotations, about 75% agreement). A stable QRS (qrs_st_coupling qrs_amplitude_stable) only argues against position; it does not make a change that vanishes against this reference an episode. Caveat: a long episode (tens of minutes) or a lead with frequent long episodes can pull the 30-min trend along and be partly absorbed, so for long candidates read it with the trend image and episode_context. A measurement packet, not a diagnosis."
+    }
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

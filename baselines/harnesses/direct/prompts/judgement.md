@@ -1,0 +1,2 @@
+
+The outputs of a fixed set of checks on this candidate are given below; no other tools are available. Judge the candidate from them, then record your assessment with submit_assessment (stage "final"): p_ischemic, your probability that this ST change is ischemic; the label that best explains it, which must agree with p_ischemic ("ischemic" if p_ischemic >= 0.5, otherwise the most likely non-ischemic cause); the evidence ids you relied on; and a short rationale. Then reply with a one-paragraph summary.

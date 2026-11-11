@@ -1,0 +1,42 @@
+{
+  "id": "a06",
+  "parent": "a02",
+  "summary": "Aspect B (tools and evidence): a02 with the library tool record_st_overview (how often the involved lead sits at the candidate's level outside all candidates, the extremum's percentile in the record, hourly median ST and heart rate, and a whole-record ST trend image) added to the first-message dossier, with a two-directional reading guide in its description and a pointer in the Context guidance.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response",
+      "record_st_overview"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {
+      "record_st_overview": "The whole record at a glance for each lead this candidate involves, with deviations from the record-wide reference signed so that positive points towards this candidate's extremum: frac_record_outside_candidates_at_half_extremum_or_more and frac_record_outside_candidates_at_extremum_or_more (the share of usable 15-s windows outside every candidate, +-60 s, whose deviation reaches half of / all of this candidate's extremum), extremum_percentile_in_record, the other candidates of the same lead and sign, and the hourly median ST deviation and median heart rate. The dossier also attaches a whole-record ST trend image (all leads, heart rate below, this candidate shaded), after the other images. It answers one question: is this candidate a new change for this lead, or a level the lead often sits at? How to read it, in both directions: when the lead outside all candidates rarely reaches even half of the extremum, the extremum ranks at the top of the record, and the hourly medians stay near zero, the candidate is a level this lead seldom reaches; that is evidence against slow drift and reference effects (other_nonischemic), but it does not by itself separate ischaemia from a heart-rate related or positional change (use rate_response, episode_dynamics and morphology_steps for that). When the lead outside all candidates often sits at half of the extremum or beyond, or the hourly median drifts towards the candidate's level for an hour or more around it (in the image: a slow wave or a sustained offset rather than a separate bump), the candidate is largely the lead's usual or slowly drifting level; that is evidence for a slow drift or reference effect and against a new ischaemic episode, unless the change against the local level before it (episode_context) is still large. The count and list of other candidates of the same lead and sign are not evidence either way (see Recurrence in the guidance); compare their size and shape with this candidate instead. Supplied in the initial dossier. A measurement packet, not a diagnosis."
+    }
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

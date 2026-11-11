@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.DS_Store
+data/
+cache/
+RSI/runs*/
+RSI/workspace/
+RSI/cloop*/
+RSI/improver/
+outputs/

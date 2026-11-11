@@ -1,0 +1,44 @@
+{
+  "id": "a12",
+  "parent": "a07",
+  "summary": "Aspect C (reasoning procedure): a07 with an evidence-sorting step before submission (five questions answered once each: real change, separate change vs usual level, position/conduction, heart rate, shape/size; a finding that only rules out a non-ischemic cause goes for ischemia only when that cause was plausible and never against it, a missing ischemic sign such as a stable QRS is not evidence against ischemia (K18/K19 describe transient ST elevation only) and a missing non-ischemic sign is not evidence for it (K14), tools answering the same question count once, and p is set from the answers' strength, not the number of findings).",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response",
+      "record_st_overview",
+      "annotator_reference"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {
+      "record_st_overview": "The whole record at a glance for each lead this candidate involves, with deviations from the record-wide reference signed so that positive points towards this candidate's extremum: frac_record_outside_candidates_at_half_extremum_or_more and frac_record_outside_candidates_at_extremum_or_more (the share of usable 15-s windows outside every candidate, +-60 s, whose deviation reaches half of / all of this candidate's extremum), extremum_percentile_in_record, the other candidates of the same lead and sign, and the hourly median ST deviation and median heart rate. The dossier also attaches a whole-record ST trend image (all leads, heart rate below, this candidate shaded), after the other images. It answers one question: is this candidate a new change for this lead, or a level the lead often sits at? How to read it, in both directions: when the lead outside all candidates rarely reaches even half of the extremum, the extremum ranks at the top of the record, and the hourly medians stay near zero, the candidate is a level this lead seldom reaches; that is evidence against slow drift and reference effects (other_nonischemic), but it is not by itself evidence for ischaemia: it does not separate ischaemia from a heart-rate related, positional or conduction change (use rate_response, episode_dynamics and morphology_steps for that), and it does not show whether the lead's local level drifted slowly into the candidate (annotator_reference shows that). When the lead outside all candidates often sits at half of the extremum or beyond, or the hourly median drifts towards the candidate's level for an hour or more around it (in the image: a slow wave or a sustained offset rather than a separate bump), the candidate is largely the lead's usual or slowly drifting level; that is evidence for a slow drift or reference effect and against a new ischaemic episode, unless the change against the local level before it (episode_context) is still large. The count and list of other candidates of the same lead and sign are not evidence either way (see Recurrence in the guidance); compare their size and shape with this candidate instead. Supplied in the initial dossier. A measurement packet, not a diagnosis.",
+      "annotator_reference": "The candidate re-judged against a time-varying ST reference built like that of Smrdel & Jager (2002), an automatic approximation of the Long-Term ST Database annotators' reference. The annotators measured deviations from an ST reference function joined between local references placed in non-ischaemic data (K22), and that reference followed slow drifts, axis shifts and conduction changes; so a change that exceeds 100 uV against our record-wide median can stay below 100 uV against theirs. Per involved lead: the peak deviation against the record-wide median and after each of three steps (slow trend: 30-min and 4-h moving means; steps: ST or QRS-shape steps; lead orientation: deviations opposite to the lead's usual direction absorbed), whether the LTSTDB episode rule still finds an episode at 100 uV and at 150 uV, which step first dropped it below 100 uV, the lead's orientation and the reference slope. How to read it, in both directions: an episode at 150 uV in the peak lead means the change stands out from the slow trend, the steps and the lead's orientation; that is evidence against slow drift, position/axis and reference explanations, but it does not separate an ischaemic from a heart-rate related change. No episode at 100 uV in any involved lead means the change is largely accounted for by a slow trend (drift), a step (position/axis or conduction) or a deviation opposite to the lead's usual direction (named by first_step_dropping_it_below_100_uv); that is evidence for the corresponding non-ischaemic explanation. When the step named is 'step', confirm it in morphology_steps (a synchronous ST and QRS step at one moment) before reading it as position. An episode at 100 but not at 150 uV is the uncertain zone (Smrdel & Jager needed 150 uV with their automatic reference to match the protocol B annotations, at about 75% sensitivity and positive predictivity). The reference is approximate: a long real episode can pull the 30-min trend along and be partly absorbed, and a step detected in a lead with a very small QRS is unreliable; weigh it together with episode_dynamics, episode_context and the trend image, not as a verdict. Relation to record_st_overview (also in the dossier): that tool compares the candidate with the whole record, this one with the lead's local, slowly moving level. When both agree (a level the lead seldom reaches and still an episode at 150 uV; or a level the lead often sits at and no episode at 100 uV), the reading is stronger. When they disagree (rare in the record, but absorbed by the slow trend or a step), the change is a slow or stepwise move of the lead's level rather than a separate bump; weigh it as mixed and look at the course in episode_dynamics and the trend images. Supplied in the initial dossier. A measurement packet, not a diagnosis."
+    }
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

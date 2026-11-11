@@ -1,0 +1,45 @@
+{
+  "id": "a13",
+  "parent": "a09",
+  "summary": "Aspect B (tools and evidence): a09 with a new dossier tool st_shape_change (per involved lead, the J-point, ST-point, T-wave and QRS-amplitude change at the extremum against the same lead before onset and at matched heart rate, the share of the ST-point change present at J and a pattern line), with a two-directional reading guide that maps it to the Long-Term ST Database shape terms (J depression with positive slope, parallel shift, T into ST versus horizontal flattening, down sloping, elevation; K24/K25/K26) and pointers in the Context shape and depth guidance.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response",
+      "annotator_reference",
+      "ecg_statements",
+      "st_shape_change"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {
+      "annotator_reference": "The candidate re-judged against a time-varying ST reference built like that of Smrdel & Jager (2002), an automatic approximation of the Long-Term ST Database annotators' reference. The annotators measured deviations from an ST reference function joined between local references placed in non-ischaemic data (K22), and that reference followed slow drifts, axis shifts and conduction changes; so a change that exceeds 100 uV against our record-wide median can stay below 100 uV against theirs. Per involved lead: the peak deviation against the record-wide median and after each of three steps (slow trend: 30-min and 4-h moving means; steps: ST or QRS-shape steps; lead orientation: deviations opposite to the lead's usual direction absorbed), whether the LTSTDB episode rule still finds an episode at 100 uV and at 150 uV, which step first dropped it below 100 uV, the lead's orientation and the reference slope. How to read it, in both directions: an episode at 150 uV in the peak lead means the change stands out from the slow trend, the steps and the lead's orientation; that is evidence against slow drift, position/axis and reference explanations, but it does not separate an ischaemic from a heart-rate related change. No episode at 100 uV in any involved lead means the change is largely accounted for by a slow trend (drift), a step (position/axis or conduction) or a deviation opposite to the lead's usual direction (named by first_step_dropping_it_below_100_uv); that is evidence for the corresponding non-ischaemic explanation. When the step named is 'step', confirm it in morphology_steps (a synchronous ST and QRS step at one moment) before reading it as position. An episode at 100 but not at 150 uV is the uncertain zone (Smrdel & Jager needed 150 uV with their automatic reference to match the protocol B annotations, at about 75% sensitivity and positive predictivity). The reference is approximate: a long real episode can pull the 30-min trend along and be partly absorbed, and a step detected in a lead with a very small QRS is unreliable; weigh it together with episode_dynamics, episode_context and the trend image, not as a verdict. Supplied in the initial dossier. A measurement packet, not a diagnosis.",
+      "ecg_statements": "ECG statements of a foundation model (ECGFounder, trained on over 10 million clinical 10-s ECGs with 150 statement categories annotated by cardiology experts) for this candidate, read on 10-s windows: the dossier's reference window (find_reference_window) and up to seven windows inside the candidate (onset, peak, end and evenly spaced ones). Per involved lead, peak lead first (single-lead model, each lead read alone), and for the 12-lead model when lead names map to 12-lead slots (ML2 -> II, MLIII -> III, MV2 -> V2, V-leads by name; the other slots empty): each statement as [probability in the reference window, median inside the candidate, change], in groups: repolarization (nonspecific ST, T or ST-T abnormality, repolarization abnormality, early repolarization, acute MI/STEMI), injury_pattern_max (the largest injury-pattern statement), serial_statement_proxies (ST now/more depressed, ST elevation now present/more elevated, T inversion now evident), conduction (bundle-branch blocks, intraventricular conduction delay, QRS widening, fascicular block), axis, rhythm and other (low voltage, LVH, abnormal ECG); plus the five statements that changed most from the reference in the peak lead. It is a second view that uses none of our fiducials, ST reference or episode rule. The probabilities are uncalibrated and the model was trained on clinical ECGs, not Holter leads, so read the change against the patient's own reference window, not absolute values. How to read it, in both directions: (1) ST statements (repolarization, injury pattern, the serial proxies of the candidate's sign) rising clearly in the lead of the ST change mean the learned reader also sees a new ST abnormality there; that argues against noise, a misplaced J point or a reference effect, but it does not by itself separate an ischaemic from a heart-rate related or positional change. Little or no rise while our measurements show a large deviation means the learned reader does not see a new ST abnormality; that weakens the case for a clear ST change, so recheck the measure_window image (J point, baseline) before relying on our number. (2) Conduction statements rising from the reference point to a conduction change (check QRS width in measure_window and eligibility_check); stable ones argue against it. (3) Axis statements changing point to an axis or position shift (check compare_morphology and morphology_steps); they are weak when the record has no limb-lead pair, and stable axis statements do not exclude a position shift. (4) A rise of sinus tachycardia only restates the heart-rate rise; atrial fibrillation or flutter rising means check rr_irregularity and view_ecg. (5) When the reference window was at a clearly different heart rate from the candidate, part of every change comes from the heart rate. 'ACUTE MI / STEMI' and injury-pattern probabilities are statements a model learned from clinical ECGs, not a diagnosis. Supplied in the initial dossier. A measurement packet, not a diagnosis."
+    }
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

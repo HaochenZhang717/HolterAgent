@@ -1,0 +1,44 @@
+{
+  "id": "a11",
+  "parent": "a01",
+  "summary": "Aspect B (tools and evidence): a01 with the library tool hr_rise_ledger (heart-rate baseline and rise, heart-rate peak to ST extremum timing, seconds of ST still deviated after heart rate is back at baseline, and the patient's comparable heart-rate rises with their ST change) added to the first-message dossier, with a two-directional, card-backed reading guide in its description (K01/K02/K03/K04/K07/K08) and a pointer in the Context heart-rate guidance.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "rate_response",
+      "annotator_reference",
+      "hr_rise_ledger"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {
+      "annotator_reference": "The candidate re-judged against a time-varying ST reference built like that of Smrdel & Jager (2002), an automatic approximation of the Long-Term ST Database annotators' reference. The annotators measured deviations from an ST reference function joined between local references placed in non-ischaemic data (K22), and that reference followed slow drifts, axis shifts and conduction changes; so a change that exceeds 100 uV against our record-wide median can stay below 100 uV against theirs. Per involved lead: the peak deviation against the record-wide median and after each of three steps (slow trend: 30-min and 4-h moving means; steps: ST or QRS-shape steps; lead orientation: deviations opposite to the lead's usual direction absorbed), whether the LTSTDB episode rule still finds an episode at 100 uV and at 150 uV, which step first dropped it below 100 uV, the lead's orientation and the reference slope. How to read it, in both directions: an episode at 150 uV in the peak lead means the change stands out from the slow trend, the steps and the lead's orientation; that is evidence against slow drift, position/axis and reference explanations, but it does not separate an ischaemic from a heart-rate related change. No episode at 100 uV in any involved lead means the change is largely accounted for by a slow trend (drift), a step (position/axis or conduction) or a deviation opposite to the lead's usual direction (named by first_step_dropping_it_below_100_uv); that is evidence for the corresponding non-ischaemic explanation. An episode at 100 but not at 150 uV is the uncertain zone (Smrdel & Jager needed 150 uV with their automatic reference to match the protocol B annotations, at about 75% sensitivity and positive predictivity). The reference is approximate: a long real episode can pull the 30-min trend along and be partly absorbed, and a step detected in a lead with a very small QRS is unreliable; weigh it together with episode_dynamics, episode_context and the trend image, not as a verdict. Supplied in the initial dossier. A measurement packet, not a diagnosis.",
+      "hr_rise_ledger": "The timing of heart rate and ST around this candidate, and the patient's own comparable heart-rate rises. At the candidate's peak lead, with ST signed towards the candidate's extremum (positive = same direction). this_candidate: heart-rate baseline (median 30 to 10 min before onset), the maximum before the ST extremum and hr_rise_bpm, minutes at baseline + 10 bpm in the 30 min before the extremum, the heart-rate load of the previous hour, hr_max_minus_st_extremum_s (negative = heart rate peaked before the ST extremum; 15-s resolution, so a few tens of seconds cannot be judged), and s_hr_back_to_baseline_while_st_at_half_or_more (seconds after the extremum with heart rate back within 5 bpm of baseline while ST is still at half the extremum or more). comparable_rises: every other rise of >= 10 bpm within 10 min elsewhere in the record (outside this candidate +-10 min) that starts and peaks within 10 bpm of this candidate's heart rates, with the ST change it produced in the same lead; these rises are not excluded when they lie inside other candidates or episodes. How to read it, in both directions: (1) Recovery timing. ST still at half its extremum or more for minutes after heart rate is back at baseline is evidence for ischaemia: in ischaemic episodes heart rate peaked on average about 80 s before the deepest ST depression and had mostly returned to baseline while ST was still depressed (K01), and ST depression continuing while heart rate falls was part of the ischaemic response in K02. ST that returns together with heart rate (s_hr_back... = 0 with a clear heart-rate fall) fits a heart-rate related change better, without excluding demand ischaemia. (2) The rise itself. A heart-rate rise before the episode is not evidence against ischaemia: 89% of daily-life ischaemic episodes followed a rise of >= 10 bpm (K03), and the likelihood that a rise leads to ischaemia grows with its size and duration (K04). No rise, or a fall, leaves little room for a heart-rate related explanation and does not exclude ischaemia (35% of episodes in K08 had no heart-rate change or a decline before onset); then weigh position, drift and the other checks. (3) Comparable rises. If most comparable rises (fraction_at_least_half low, this_extremum_minus_that_median_uv large) produced little ST change while this one produced a large change at similar heart rates, the change exceeds this patient's usual heart-rate response: evidence for ischaemia, moderate only, because the ischaemic heart-rate threshold varies widely within a patient (K07) and not every threshold crossing gives an episode (K03). If most comparable rises produced a similar ST change, this is the patient's usual response at these heart rates: compatible with a heart-rate related change, but also with recurrent demand ischaemia, because those rises may be this patient's other ST episodes (compare their times with rate_response, which marks surges inside ST episodes); then it is weak evidence and the shape, recovery timing and annotator_reference must decide. With fewer than 3 comparable rises the comparison says little. Supplied in the initial dossier. A measurement packet, not a diagnosis."
+    }
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}

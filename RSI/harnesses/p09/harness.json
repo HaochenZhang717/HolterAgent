@@ -1,0 +1,42 @@
+{
+  "id": "p09",
+  "parent": "p02",
+  "summary": "Aspect B (tools and evidence): p02 with annotator_reference in the dossier replaced by st_reference_check (same Smrdel & Jager reference and numbers, plus how a change was absorbed: step absorption split by whether a QRS-shape step lies within 144 s of the candidate, the steps behind it, and whether the change goes against the lead's orientation), with a description that reads orientation absorption as clearly against, step absorption with a QRS-shape step as against (K14), and step absorption from the change's own ST-level step as neither direction.",
+  "system": {
+    "judgement": [
+      "context.md",
+      "images.md",
+      "judgement.md",
+      "labels.md"
+    ]
+  },
+  "sessions": {
+    "first_impression": false,
+    "dossier": [
+      "standard",
+      "episode_context",
+      "st_reference_check",
+      "rate_response"
+    ],
+    "verify": "none",
+    "verify_band": [
+      0.2,
+      0.8
+    ],
+    "max_verify_rounds": 3
+  },
+  "tools": {
+    "toolset": "base",
+    "extra": [
+      "episode_context",
+      "rate_response"
+    ],
+    "descriptions": {
+      "annotator_reference": "The same Smrdel & Jager reference as st_reference_check, which is already in the dossier with the same numbers and a finer reading of how a change was absorbed; use st_reference_check instead (first_step_dropping_it_below_100_uv here does not say whether a step was a QRS-shape step or the change's own ST-level step). A measurement packet, not a diagnosis."
+    }
+  },
+  "limits": {
+    "max_tool_calls": 30,
+    "stall_turns": 3
+  }
+}
